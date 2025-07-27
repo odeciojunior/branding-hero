@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero | Transformação Digital com Resultados, não PowerPoints</title>
+    
+    <!-- Meta Tags for SEO -->
+    <meta name="description" content="90% dos projetos de transformação digital falham. Nós mergulhamos no seu negócio e entregamos soluções que funcionam em 90 dias, não em 2 anos. Chega de gastar milhões em PowerPoints.">
+    <meta name="keywords" content="transformação digital, automação de processos, integração de sistemas, business intelligence, consultoria de ti, pmes, resultados rápidos">
+    <meta name="author" content="Hero Corp">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://herocorp.com.br/">
+    <meta property="og:title" content="Hero | Transformação Digital com Resultados, não PowerPoints">
+    <meta property="og:description" content="Entregamos soluções que funcionam em 90 dias, não em 2 anos. Chega de gastar milhões em PowerPoints.">
+    <meta property="og:image" content="https://placehold.co/1200x630/003B73/FFFFFF?text=hero">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://herocorp.com.br/">
+    <meta property="twitter:title" content="Hero | Transformação Digital com Resultados, não PowerPoints">
+    <meta property="twitter:description" content="Entregamos soluções que funcionam em 90 dias, não em 2 anos. Chega de gastar milhões em PowerPoints.">
+    <meta property="twitter:image" content="https://placehold.co/1200x630/003B73/FFFFFF?text=hero">
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://placehold.co/32x32/003B73/FFFFFF?text=h" type="image/png">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Markdown-it for rendering Gemini's response -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/14.0.0/markdown-it.min.js"></script>
+    
+    <!-- Alpine.js Initialization -->
+    <script>
+        document.addEventListener('alpine:init', () => {
+            // Reusable component for animated counters
+            Alpine.data('counters', () => ({
+                pmes: 0,
+                custos: '0.0',
+                satisfacao: 0,
+                tempo: 0,
+                start() {
+                    this.animate(this, 'pmes', 87, 2000);
+                    this.animate(this, 'custos', 4.2, 2000, 1);
+                    this.animate(this, 'satisfacao', 92, 2000);
+                    this.animate(this, 'tempo', 32, 2000);
+                },
+                animate(target, prop, end, duration, decimals = 0) {
+                    let start = 0;
+                    let startTime = null;
+                    const step = (timestamp) => {
+                        if (!startTime) startTime = timestamp;
+                        const progress = Math.min((timestamp - startTime) / duration, 1);
+                        const current = progress * (end - start) + start;
+                        target[prop] = current.toFixed(decimals);
+                        if (progress < 1) {
+                            window.requestAnimationFrame(step);
+                        } else {
+                           target[prop] = end.toFixed(decimals);
+                        }
+                    };
+                    window.requestAnimationFrame(step);
+                }
+            }));
+
+            // Component for the Gemini-powered Quick Win Generator
+            Alpine.data('quickWinGenerator', () => ({
+                problemDescription: '',
+                status: 'idle', // idle, loading, success, error
+                generatedIdea: '',
+                async generateIdea() {
+                    if (!this.problemDescription.trim()) {
+                        alert('Por favor, descreva seu problema.');
+                        return;
+                    }
+                    this.status = 'loading';
+                    this.generatedIdea = '';
+
+                    const prompt = `Aja como um consultor sênior da HERO, uma empresa de transformação digital focada em PMEs. Um cliente descreveu o seguinte problema: "${this.problemDescription}". Baseado nisso, gere uma ideia de "Quick Win" (resultado rápido) para ele. A resposta deve ser em Markdown e seguir esta estrutura:
+- **O Problema:** Um resumo da dor do cliente.
+- **Nossa Solução (Quick Win):** Uma solução específica e prática.
+- **Tempo de Implementação:** Ex: "30-45 dias".
+- **ROI Estimado:** Um número ou faixa percentual realista.
+- **Como Funciona:** Um breve passo a passo.
+Use a linguagem direta e focada em resultados da HERO.`;
+
+                    try {
+                        const response = await this.callGeminiAPI(prompt);
+                        const md = window.markdownit();
+                        this.generatedIdea = md.render(response);
+                        this.status = 'success';
+                    } catch (error) {
+                        console.error('Gemini API error:', error);
+                        this.generatedIdea = '<p class="text-red-500">Ocorreu um erro ao gerar a ideia. Por favor, tente novamente.</p>';
+                        this.status = 'error';
+                    }
+                },
+                async callGeminiAPI(prompt) {
+                    const apiKey = ""; // Canvas will provide the key
+                    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+                    const payload = {
+                        contents: [{ role: "user", parts: [{ text: prompt }] }]
+                    };
+                    const response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+                    if (!response.ok) {
+                        throw new Error(`API request failed with status ${response.status}`);
+                    }
+                    const result = await response.json();
+                    if (result.candidates && result.candidates.length > 0) {
+                        return result.candidates[0].content.parts[0].text;
+                    }
+                    throw new Error('No content received from API.');
+                }
+            }));
+
+            // Reusable component for the contact form
+            Alpine.data('contactForm', () => ({
+                formData: { name: '', email: '', company: '' },
+                status: 'initial', // 'initial', 'sending', 'success'
+                submitForm() {
+                    this.status = 'sending';
+                    setTimeout(() => {
+                        this.status = 'success';
+                        console.log('Form data submitted:', this.formData);
+                    }, 1500);
+                }
+            }));
+        });
+    </script>
+    
+    <!-- Alpine.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+        .bg-hero-blue { background-color: #003B73; }
+        .text-hero-blue { color: #003B73; }
+        .border-hero-blue { border-color: #003B73; }
+        .bg-hero-lime { background-color: #C2D822; }
+        .text-hero-lime { color: #C2D822; }
+        .bg-hero-dark { background-color: #212121; }
+        .text-hero-dark { color: #212121; }
+        section { scroll-margin-top: 80px; }
+        .animate-on-scroll { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+        .animate-on-scroll.is-visible { opacity: 1; transform: translateY(0); }
+        .form-sending, .form-success, .form-initial { display: none; }
+        .form-wrapper[data-status="initial"] .form-initial,
+        .form-wrapper[data-status="sending"] .form-sending,
+        .form-wrapper[data-status="success"] .form-success { display: block; }
+        .prose h3 { margin-top: 1em; margin-bottom: 0.5em; font-size: 1.25rem; font-weight: bold; }
+        .prose ul { list-style-type: disc; margin-left: 1.5rem; }
+        .prose p { margin-bottom: 1em; }
+    </style>
+</head>
+<body x-data class="text-hero-dark antialiased">
+
+    <!-- Header -->
+    <header x-data="{ scrolled: window.scrollY > 50, mobileMenuOpen: false }" 
+            @scroll.window="scrolled = (window.scrollY > 50)" 
+            class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" 
+            :class="{ 'bg-white/95 shadow-lg backdrop-blur-sm': scrolled, 'bg-transparent': !scrolled }">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#" class="flex-shrink-0">
+                    <svg width="80" height="32" viewBox="0 0 130 50" :class="{'text-hero-blue': scrolled, 'text-white': !scrolled}" class="transition-colors duration-300" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.8,42.5c-4.9-0.5-8.8-2.4-11.8-5.8c-3-3.4-4.5-7.7-4.5-13c0-5.3,1.5-9.7,4.6-13.1c3.1-3.4,7.1-5.3,12-5.7 c1.5-0.1,3.3,0.1,5.3,0.5c3.2,0.6,5.8,1.9,7.9,3.8c1.6,1.4,2.9,3.1,3.9,5c-1.8,0.3-3.5,0.8-5,1.5c-2.3,1.1-4.1,2.8-5.4,5 c-1.3,2.2-2,4.8-2,7.7c0,3.3,0.8,6.2,2.5,8.6c1.7,2.4,4.1,4,7.3,4.8c1.1,0.3,2.3,0.4,3.5,0.4c3,0,5.7-0.9,8-2.7 c2.3-1.8,4-4.2,5-7.3c0.6-1.8,0.8-3.6,0.8-5.5c0-4.1-1.2-7.5-3.5-10.3c-2.3-2.8-5.5-4.5-9.5-5.2c-1-0.2-2-0.3-3-0.3 c-2.9,0-5.4,0.7-7.5,2.2c-2.1,1.5-3.5,3.6-4.3,6.3c-0.5,1.8-0.8,3.7-0.8,5.7c0,4.4,1.3,7.9,3.8,10.6c2.5,2.7,6,4.1,10.3,4.1 c3.3,0,6.2-1,8.6-2.9c2.4-1.9,4.1-4.5,5-7.7c0.3-1.1,0.5-2.2,0.5-3.3c-2.4-0.1-4.6-0.8-6.5-2.1c-1.9-1.3-3.4-3.1-4.4-5.3 c-1-2.2-1.5-4.7-1.5-7.4c0-4.1,1.2-7.6,3.5-10.4c2.3-2.8,5.5-4.6,9.4-5.4c1.5-0.3,3.1-0.5,4.8-0.5c5.3,0,9.7,1.8,13.1,5.5 c3.4,3.7,5.1,8.4,5.1,14c0,5.2-1.6,9.7-4.7,13.5c-3.1,3.8-7.3,6.1-12.5,7c-5.2,0.9-10.3,0.6-15.1-0.8C25.9,45.4,21.3,44.2,16.8,42.5z M88.5,48.6c-5.5,0-10.4-1.7-14.6-5.2c-4.2-3.5-6.3-8.2-6.3-14.1c0-5.9,2.1-10.7,6.3-14.2c4.2-3.5,9.1-5.2,14.6-5.2 c5.5,0,10.4,1.7,14.5,5.2c4.1,3.5,6.2,8.3,6.2,14.2c0,5.9-2.1,10.6-6.2,14.1C98.9,46.9,94,48.6,88.5,48.6z M88.5,41.9 c3,0,5.5-1,7.6-2.9c2.1-1.9,3.1-4.5,3.1-7.7c0-3.2-1-5.8-3.1-7.7c-2.1-1.9-4.6-2.9-7.6-2.9c-3,0-5.5,1-7.6,2.9 c-2.1,1.9-3.1,4.5-3.1,7.7c0,3.2,1,5.8,3.1,7.7C83,40.9,85.5,41.9,88.5,41.9z"/>
+                    </svg>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="#solucoes" :class="{'text-gray-600 hover:text-hero-blue': scrolled, 'text-gray-200 hover:text-white': !scrolled}" class="font-medium transition-colors duration-300">Soluções</a>
+                    <a href="#quick-wins" :class="{'text-gray-600 hover:text-hero-blue': scrolled, 'text-gray-200 hover:text-white': !scrolled}" class="font-medium transition-colors duration-300">Quick Wins</a>
+                    <a href="#resultados" :class="{'text-gray-600 hover:text-hero-blue': scrolled, 'text-gray-200 hover:text-white': !scrolled}" class="font-medium transition-colors duration-300">Cases</a>
+                    <a href="#manifesto" :class="{'text-gray-600 hover:text-hero-blue': scrolled, 'text-gray-200 hover:text-white': !scrolled}" class="font-medium transition-colors duration-300">Sobre</a>
+                    <a href="#contato" class="bg-hero-lime text-hero-dark font-bold py-2 px-5 rounded-lg shadow-md hover:bg-opacity-90 transition-all transform hover:scale-105">
+                        Agendar Diagnóstico
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden">
+                    <button @click="mobileMenuOpen = !mobileMenuOpen" aria-label="Abrir menu" :class="{'text-gray-600': scrolled, 'text-white': !scrolled}" class="transition-colors duration-300">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu Panel -->
+        <div x-show="mobileMenuOpen" @click.away="mobileMenuOpen = false" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="fixed inset-0 bg-black/50 z-40 lg:hidden" style="display: none;"></div>
+        <div x-show="mobileMenuOpen" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="transform translate-x-full" x-transition:enter-end="transform translate-x-0" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="transform translate-x-0" x-transition:leave-end="transform translate-x-full" class="fixed top-0 right-0 h-full w-72 bg-white shadow-xl z-50 p-8 lg:hidden" style="display: none;">
+            <nav class="flex flex-col space-y-6">
+                <a @click="mobileMenuOpen = false" href="#solucoes" class="text-gray-700 hover:text-hero-blue text-lg font-medium">Soluções</a>
+                <a @click="mobileMenuOpen = false" href="#quick-wins" class="text-gray-700 hover:text-hero-blue text-lg font-medium">Quick Wins</a>
+                <a @click="mobileMenuOpen = false" href="#resultados" class="text-gray-700 hover:text-hero-blue text-lg font-medium">Cases</a>
+                <a @click="mobileMenuOpen = false" href="#manifesto" class="text-gray-700 hover:text-hero-blue text-lg font-medium">Sobre</a>
+                <a @click="mobileMenuOpen = false" href="#contato" class="bg-hero-lime text-hero-dark text-center font-bold py-3 px-6 rounded-lg shadow-md hover:bg-opacity-90 transition-all transform hover:scale-105">
+                    Agendar Diagnóstico
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Hero Section -->
+        <section class="relative bg-hero-dark text-white">
+            <div class="absolute inset-0 bg-hero-blue opacity-80"></div>
+            <div class="absolute inset-0 bg-gradient-to-br from-hero-blue via-transparent to-hero-dark opacity-50"></div>
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="min-h-screen flex items-center justify-center text-center">
+                    <div class="max-w-4xl animate-on-scroll">
+                        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight">
+                            Chega de Gastar Milhões em PowerPoints. 
+                            <span class="block text-hero-lime mt-2 sm:mt-4">Sua Empresa Precisa de Resultados.</span>
+                        </h1>
+                        <p class="mt-6 sm:mt-8 max-w-2xl mx-auto text-lg sm:text-xl md:text-2xl text-gray-300">
+                            90% dos projetos de transformação digital falham porque tratam sua empresa como mais um número. Nós mergulhamos no seu negócio e entregamos soluções que funcionam de verdade — <strong class="text-white">em 90 dias, não em 2 anos.</strong>
+                        </p>
+                        <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+                            <a href="#contato" class="w-full sm:w-auto bg-hero-lime text-hero-dark font-bold text-lg py-4 px-8 rounded-lg shadow-lg hover:bg-opacity-90 transition-all transform hover:scale-105">
+                                Quero Resultados em 90 Dias
+                            </a>
+                            <a href="#quick-wins" class="w-full sm:w-auto bg-transparent border-2 border-gray-400 text-gray-200 font-medium text-lg py-4 px-8 rounded-lg hover:bg-gray-700 hover:border-gray-700 transition-all">
+                                Ver Quick Wins Disponíveis
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problems Section -->
+        <section id="problemas" class="py-20 md:py-32 bg-gray-100">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 animate-on-scroll">
+                <div class="text-center max-w-3xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Você reconhece algum destes problemas?</h2>
+                    <p class="mt-4 text-lg text-gray-600">Se você se identifica com pelo menos dois, a conversa é com a gente.</p>
+                </div>
+
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-red-500 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                        <p class="text-lg font-semibold text-gray-800 flex items-start">
+                            <span class="text-red-500 mr-4 text-2xl font-bold">✗</span>
+                            Equipe perdendo horas preciosas em tarefas manuais e repetitivas.
+                        </p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-red-500 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                        <p class="text-lg font-semibold text-gray-800 flex items-start">
+                            <span class="text-red-500 mr-4 text-2xl font-bold">✗</span>
+                            Sistemas que não conversam entre si, gerando retrabalho e erros.
+                        </p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-red-500 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                        <p class="text-lg font-semibold text-gray-800 flex items-start">
+                            <span class="text-red-500 mr-4 text-2xl font-bold">✗</span>
+                            Dados importantes espalhados por mil planilhas, sem visão única.
+                        </p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-red-500 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                        <p class="text-lg font-semibold text-gray-800 flex items-start">
+                            <span class="text-red-500 mr-4 text-2xl font-bold">✗</span>
+                            Decisões cruciais baseadas em "achismo" em vez de dados concretos.
+                        </p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-red-500 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                        <p class="text-lg font-semibold text-gray-800 flex items-start">
+                            <span class="text-red-500 mr-4 text-2xl font-bold">✗</span>
+                            Projetos de tecnologia que se arrastam por anos sem entregar valor real.
+                        </p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-red-500 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                        <p class="text-lg font-semibold text-gray-800 flex items-start">
+                            <span class="text-red-500 mr-4 text-2xl font-bold">✗</span>
+                            Consultorias que falam "corporatês" e vendem soluções genéricas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solutions Section -->
+        <section id="solucoes" class="py-20 md:py-32 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 animate-on-scroll">
+                <div class="text-center max-w-3xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-hero-blue">Transformação Digital com Inteligência Aplicada</h2>
+                    <p class="mt-4 text-lg text-gray-600">Nossa promessa: descomplicamos a tecnologia para sua empresa crescer com resultados reais. Sem jargões, sem complexidade.</p>
+                </div>
+
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Card 1 -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-md transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                        <div class="text-4xl mb-4">🚀</div>
+                        <h3 class="text-xl font-bold mb-2">Processos Inteligentes</h3>
+                        <p class="text-gray-600 mb-4">Automatizamos as tarefas certas e liberamos <strong class="text-hero-blue">60% do tempo</strong> da sua equipe em 90 dias para focar no que realmente importa.</p>
+                        <a href="#quick-wins" class="font-semibold text-hero-blue hover:underline">Ver Quick Win de Automação &rarr;</a>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-md transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                        <div class="text-4xl mb-4">🔗</div>
+                        <h3 class="text-xl font-bold mb-2">Sistemas Integrados</h3>
+                        <p class="text-gray-600 mb-4">Conectamos suas plataformas, criando um fluxo de informação que <strong class="text-hero-blue">reduz erros em 80%</strong> e acelera decisões em <strong class="text-hero-blue">3x</strong>.</p>
+                        <a href="#quick-wins" class="font-semibold text-hero-blue hover:underline">Ver Quick Win de Integração &rarr;</a>
+                    </div>
+                    
+                    <!-- Card 3 -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-md transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                        <div class="text-4xl mb-4">💡</div>
+                        <h3 class="text-xl font-bold mb-2">Dados que Geram Valor</h3>
+                        <p class="text-gray-600 mb-4">Transformamos seus dados presos em planilhas em insights que <strong class="text-hero-blue">aumentam vendas em 25%</strong> e reduzem custos.</p>
+                        <a href="#quick-wins" class="font-semibold text-hero-blue hover:underline">Ver Quick Win de BI &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Quick Wins Section with AI Generator -->
+        <section id="quick-wins" class="py-20 md:py-32 bg-hero-dark text-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 animate-on-scroll">
+                <div class="text-center max-w-3xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-hero-lime">Quick Wins: Resultados em Dias, não Meses</h2>
+                    <p class="mt-4 text-lg text-gray-300">Confira exemplos de resultados rápidos que entregamos ou descreva um problema e deixe nossa IA gerar uma ideia de Quick Win para você.</p>
+                </div>
+                <div class="mt-16 grid md:grid-cols-3 gap-8">
+                    <!-- Static Quick Wins -->
+                     <div class="bg-gray-800 p-8 rounded-xl border border-gray-700 transition-transform duration-300 hover:-translate-y-2">
+                        <div class="text-5xl mb-4">🤖</div>
+                        <h3 class="text-xl font-bold mb-2 text-white">Bot de Processamento de Notas</h3>
+                        <div class="flex justify-between items-center text-sm font-semibold mb-4">
+                            <span class="bg-blue-900/50 text-blue-300 py-1 px-3 rounded-full">⏱️ Em 30 dias</span>
+                            <span class="text-green-400">📈 ROI: 400%</span>
+                        </div>
+                        <p class="text-gray-400">Reduzimos o fechamento mensal de 3 dias para apenas 2 horas.</p>
+                    </div>
+                    <div class="bg-gray-800 p-8 rounded-xl border border-gray-700 transition-transform duration-300 hover:-translate-y-2">
+                        <div class="text-5xl mb-4">📊</div>
+                        <h3 class="text-xl font-bold mb-2 text-white">Dashboard Gerencial em Tempo Real</h3>
+                        <div class="flex justify-between items-center text-sm font-semibold mb-4">
+                            <span class="bg-blue-900/50 text-blue-300 py-1 px-3 rounded-full">⏱️ Em 45 dias</span>
+                            <span class="text-green-400">📈 ROI: 300%</span>
+                        </div>
+                        <p class="text-gray-400">Decisões 3x mais rápidas com dados consolidados e confiáveis.</p>
+                    </div>
+                    <div class="bg-gray-800 p-8 rounded-xl border border-gray-700 transition-transform duration-300 hover:-translate-y-2">
+                        <div class="text-5xl mb-4">🔄</div>
+                        <h3 class="text-xl font-bold mb-2 text-white">Integração ERP-CRM</h3>
+                         <div class="flex justify-between items-center text-sm font-semibold mb-4">
+                            <span class="bg-blue-900/50 text-blue-300 py-1 px-3 rounded-full">⏱️ Em 45 dias</span>
+                            <span class="text-green-400">📈 ROI: 350%</span>
+                        </div>
+                        <p class="text-gray-400">Fim do retrabalho com sincronização 100% automática da informação.</p>
+                    </div>
+                </div>
+
+                <!-- AI Quick Win Generator -->
+                <div x-data="quickWinGenerator" class="mt-20 max-w-3xl mx-auto bg-gray-800 p-8 rounded-xl border border-hero-lime/30">
+                    <h3 class="text-2xl font-bold text-center text-white mb-4">✨ Gerador de Quick Wins com IA</h3>
+                    <p class="text-center text-gray-300 mb-6">Tem um problema específico? Descreva-o abaixo e nossa IA irá sugerir uma solução rápida e de alto impacto para sua empresa.</p>
+                    <div class="space-y-4">
+                        <textarea x-model="problemDescription" rows="3" class="w-full bg-gray-700 text-white rounded-md p-3 border border-gray-600 focus:ring-hero-lime focus:border-hero-lime" placeholder="Ex: 'Gastamos muito tempo conferindo manualmente os pedidos que chegam por e-mail e inserindo no nosso sistema de ERP.'"></textarea>
+                        <button @click="generateIdea" :disabled="status === 'loading'" class="w-full bg-hero-lime text-hero-dark font-bold py-3 px-6 rounded-lg shadow-md hover:bg-opacity-90 transition-all transform hover:scale-105 disabled:bg-gray-500 disabled:cursor-not-allowed">
+                            <span x-show="status !== 'loading'">Gerar Ideia de Quick Win</span>
+                            <span x-show="status === 'loading'">Gerando ideias...</span>
+                        </button>
+                    </div>
+
+                    <div x-show="status === 'loading'" class="mt-6 text-center">
+                        <p>Analisando seu problema e buscando a melhor solução...</p>
+                        <div class="mt-4 h-1 w-full bg-gray-700 rounded-full overflow-hidden">
+                            <div class="h-1 bg-hero-lime animate-pulse" style="width:100%"></div>
+                        </div>
+                    </div>
+
+                    <div x-show="generatedIdea" x-transition class="mt-6 bg-gray-900/50 p-6 rounded-lg prose prose-invert max-w-none text-gray-300" x-html="generatedIdea"></div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Social Proof/Results Section -->
+        <section id="resultados" class="py-20 md:py-32 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 animate-on-scroll">
+                <div class="text-center max-w-3xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Não acredite só na nossa palavra. <span class="text-hero-blue">Acredite nos números.</span></h2>
+                    <p class="mt-4 text-lg text-gray-600">Entregamos resultados que aparecem no caixa, não só em relatórios bonitos.</p>
+                </div>
+                
+                <div class="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center" x-data="counters" x-intersect.once="start()">
+                    <div class="bg-gray-100 p-8 rounded-xl">
+                        <p x-text="pmes" class="text-5xl font-extrabold text-hero-blue"></p>
+                        <p class="mt-2 text-lg font-medium text-gray-700">PMEs Transformadas</p>
+                    </div>
+                    <div class="bg-gray-100 p-8 rounded-xl">
+                        <p class="text-5xl font-extrabold text-hero-blue">R$<span x-text="custos"></span>M</p>
+                        <p class="mt-2 text-lg font-medium text-gray-700">Em Custos Reduzidos para Clientes</p>
+                    </div>
+                    <div class="bg-gray-100 p-8 rounded-xl">
+                        <p class="text-5xl font-extrabold text-hero-blue"><span x-text="satisfacao"></span>%</p>
+                        <p class="mt-2 text-lg font-medium text-gray-700">De Satisfação (NPS)</p>
+                    </div>
+                     <div class="bg-gray-100 p-8 rounded-xl">
+                        <p class="text-5xl font-extrabold text-hero-blue"><span x-text="tempo"></span> dias</p>
+                        <p class="mt-2 text-lg font-medium text-gray-700">Tempo Médio para o 1º Quick Win</p>
+                    </div>
+                </div>
+
+                <div class="mt-20 max-w-4xl mx-auto">
+                    <div class="bg-hero-blue text-white p-10 rounded-2xl shadow-2xl relative">
+                        <svg class="absolute top-8 left-8 w-12 h-12 text-blue-400 opacity-50" fill="currentColor" viewBox="0 0 32 32"><path d="M10.667 22.667h5.333v-10.667h-8v5.333c0 2.947 2.387 5.333 5.333 5.333zM21.333 12h-8v5.333c0 2.947 2.387 5.333 5.333 5.333h5.333v-10.667z"></path></svg>
+                        <blockquote class="relative z-10">
+                            <p class="text-2xl font-medium leading-relaxed">"A Hero mudou o jogo para nós. Deixamos de ser uma empresa reativa, que apagava incêndios, para uma operação proativa e guiada por dados. O resultado? Ganhamos 47% em vendas online e reduzimos 62% dos custos operacionais. Eles não são fornecedores, são parceiros de verdade."</p>
+                            <footer class="mt-6">
+                                <p class="text-lg font-bold">Diretor de Operações</p>
+                                <p class="text-blue-200">Líder Nacional no Segmento de Varejo</p>
+                            </footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Manifesto Section -->
+        <section id="manifesto" class="py-20 md:py-32 bg-gray-100">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-16 items-center animate-on-scroll">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Nossa missão é clara: ser o parceiro que sua empresa <span class="text-hero-blue">realmente merece</span> na jornada digital.</h2>
+                    <p class="mt-6 text-lg text-gray-600">Nascemos da frustração de ver empresas incríveis paralisadas por processos arcaicos. Cansamos de assistir consultorias cobrarem fortunas por relatórios que nunca saem da gaveta. Nós existimos para fazer diferente.</p>
+                </div>
+                <div class="space-y-6">
+                    <div class="bg-white p-6 rounded-lg shadow-md transition-transform duration-300 hover:scale-105">
+                        <h3 class="font-bold text-lg">Proximidade antes de PowerPoints</h3>
+                        <p class="text-gray-600">Mergulhamos no seu negócio antes de propor qualquer solução. Sua realidade guia nossa estratégia.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md transition-transform duration-300 hover:scale-105">
+                        <h3 class="font-bold text-lg">Quick Wins que constroem confiança</h3>
+                        <p class="text-gray-600">Resultados em 30 dias provam nossa competência melhor do que promessas para 2 anos.</p>
+                    </div>
+                     <div class="bg-white p-6 rounded-lg shadow-md transition-transform duration-300 hover:scale-105">
+                        <h3 class="font-bold text-lg">Capacitação, não dependência</h3>
+                        <p class="text-gray-600">Você não precisa de nós para sempre. Transferimos conhecimento e tornamos sua equipe autônoma.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md transition-transform duration-300 hover:scale-105">
+                        <h3 class="font-bold text-lg">ROI ou GTFO</h3>
+                        <p class="text-gray-600">Se não provamos retorno claro em 90 dias, não deveríamos estar trabalhando juntos. Simples assim.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section id="contato" class="py-20 md:py-32 bg-hero-blue text-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center animate-on-scroll">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold">Pronto para ter Resultados, e não só Reuniões?</h2>
+                <p class="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-blue-200">Chega de promessas vagas. Agende um diagnóstico gratuito e, em 30 minutos, vamos te mostrar os quick wins que podem gerar o maior impacto no seu negócio. Agora.</p>
+                
+                <div class="mt-12 max-w-xl mx-auto" x-data="contactForm">
+                    <form @submit.prevent="submitForm" class="bg-white p-8 rounded-xl shadow-2xl text-left space-y-6 form-wrapper" :data-status="status">
+                        <div class="form-initial">
+                            <p class="text-hero-dark text-center font-bold text-xl">Peça seu diagnóstico gratuito</p>
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700">Seu nome</label>
+                                <input type="text" name="name" id="name" x-model="formData.name" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-hero-blue focus:border-hero-blue text-gray-900">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700">Seu melhor e-mail</label>
+                                <input type="email" name="email" id="email" x-model="formData.email" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-hero-blue focus:border-hero-blue text-gray-900">
+                            </div>
+                            <div>
+                                <label for="company" class="block text-sm font-medium text-gray-700">Empresa</label>
+                                <input type="text" name="company" id="company" x-model="formData.company" class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-hero-blue focus:border-hero-blue text-gray-900">
+                            </div>
+                            <div>
+                                <button type="submit" class="w-full flex justify-center py-4 px-4 border border-transparent rounded-md shadow-sm text-lg font-bold text-hero-dark bg-hero-lime hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-hero-lime transition-all transform hover:scale-105">
+                                    Agendar Meu Diagnóstico Gratuito
+                                </button>
+                            </div>
+                            <p class="text-center text-xs text-gray-500">Sem compromisso. Sem vendas forçadas. Apenas uma conversa honesta.</p>
+                        </div>
+
+                        <!-- Sending State -->
+                        <div class="form-sending text-center text-gray-700 py-10">
+                            <p class="text-lg font-semibold">Enviando sua solicitação...</p>
+                            <div class="mt-4 h-2 w-full bg-gray-200 rounded-full overflow-hidden">
+                                <div class="h-2 bg-hero-blue animate-pulse" style="width:100%"></div>
+                            </div>
+                        </div>
+
+                        <!-- Success State -->
+                        <div class="form-success text-center text-green-700 bg-green-50 p-6 rounded-lg">
+                            <h3 class="text-xl font-bold">Obrigado!</h3>
+                            <p class="mt-2">Sua solicitação foi recebida. Nossa equipe de heróis entrará em contato em breve.</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-hero-dark text-gray-400">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- About -->
+                <div class="col-span-1 md:col-span-2">
+                     <a href="#" class="flex items-center space-x-2 mb-4">
+                        <svg width="80" height="32" viewBox="0 0 130 50" class="text-white" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M16.8,42.5c-4.9-0.5-8.8-2.4-11.8-5.8c-3-3.4-4.5-7.7-4.5-13c0-5.3,1.5-9.7,4.6-13.1c3.1-3.4,7.1-5.3,12-5.7 c1.5-0.1,3.3,0.1,5.3,0.5c3.2,0.6,5.8,1.9,7.9,3.8c1.6,1.4,2.9,3.1,3.9,5c-1.8,0.3-3.5,0.8-5,1.5c-2.3,1.1-4.1,2.8-5.4,5 c-1.3,2.2-2,4.8-2,7.7c0,3.3,0.8,6.2,2.5,8.6c1.7,2.4,4.1,4,7.3,4.8c1.1,0.3,2.3,0.4,3.5,0.4c3,0,5.7-0.9,8-2.7 c2.3-1.8,4-4.2,5-7.3c0.6-1.8,0.8-3.6,0.8-5.5c0-4.1-1.2-7.5-3.5-10.3c-2.3-2.8-5.5-4.5-9.5-5.2c-1-0.2-2-0.3-3-0.3 c-2.9,0-5.4,0.7-7.5,2.2c-2.1,1.5-3.5,3.6-4.3,6.3c-0.5,1.8-0.8,3.7-0.8,5.7c0,4.4,1.3,7.9,3.8,10.6c2.5,2.7,6,4.1,10.3,4.1 c3.3,0,6.2-1,8.6-2.9c2.4-1.9,4.1-4.5,5-7.7c0.3-1.1,0.5-2.2,0.5-3.3c-2.4-0.1-4.6-0.8-6.5-2.1c-1.9-1.3-3.4-3.1-4.4-5.3 c-1-2.2-1.5-4.7-1.5-7.4c0-4.1,1.2-7.6,3.5-10.4c2.3-2.8,5.5-4.6,9.4-5.4c1.5-0.3,3.1-0.5,4.8-0.5c5.3,0,9.7,1.8,13.1,5.5 c3.4,3.7,5.1,8.4,5.1,14c0,5.2-1.6,9.7-4.7,13.5c-3.1,3.8-7.3,6.1-12.5,7c-5.2,0.9-10.3,0.6-15.1-0.8C25.9,45.4,21.3,44.2,16.8,42.5z M88.5,48.6c-5.5,0-10.4-1.7-14.6-5.2c-4.2-3.5-6.3-8.2-6.3-14.1c0-5.9,2.1-10.7,6.3-14.2c4.2-3.5,9.1-5.2,14.6-5.2 c5.5,0,10.4,1.7,14.5,5.2c4.1,3.5,6.2,8.3,6.2,14.2c0,5.9-2.1,10.6-6.2,14.1C98.9,46.9,94,48.6,88.5,48.6z M88.5,41.9 c3,0,5.5-1,7.6-2.9c2.1-1.9,3.1-4.5,3.1-7.7c0-3.2-1-5.8-3.1-7.7c-2.1-1.9-4.6-2.9-7.6-2.9c-3,0-5.5,1-7.6,2.9 c-2.1,1.9-3.1,4.5-3.1,7.7c0,3.2,1,5.8,3.1,7.7C83,40.9,85.5,41.9,88.5,41.9z"/>
+                        </svg>
+                    </a>
+                    <p class="pr-8">Sua jornada, nossa missão. Transformação digital descomplicada para sua empresa crescer com inteligência e resultados reais.</p>
+                </div>
+                <!-- Links -->
+                <div>
+                    <h3 class="text-white font-semibold tracking-wider uppercase">Navegação</h3>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="#solucoes" class="hover:text-white transition-colors">Soluções</a></li>
+                        <li><a href="#quick-wins" class="hover:text-white transition-colors">Quick Wins</a></li>
+                        <li><a href="#resultados" class="hover:text-white transition-colors">Cases</a></li>
+                        <li><a href="#manifesto" class="hover:text-white transition-colors">Sobre</a></li>
+                    </ul>
+                </div>
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-white font-semibold tracking-wider uppercase">Contato</h3>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="mailto:administrativo@herocorp.com.br" class="hover:text-white transition-colors">administrativo@herocorp.com.br</a></li>
+                        <li><p>Vitória, Espírito Santo, Brasil</p></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-16 pt-8 border-t border-gray-700 text-center text-sm">
+                <p>&copy; <span x-text="new Date().getFullYear()"></span> Hero Corp. Todos os direitos reservados. Feito para PMEs que merecem mais.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JS for scroll animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.animate-on-scroll').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+
+</body>
+</html>

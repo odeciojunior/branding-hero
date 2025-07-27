@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <script type="module">import { injectIntoGlobalHook } from "/@react-refresh";
+injectIntoGlobalHook(window);
+window.$RefreshReg$ = () => {};
+window.$RefreshSig$ = () => (type) => type;</script>
+
+    <script type="module" src="/@vite/client"></script>
+
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Performance optimizations -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/favicon.png" as="image" type="image/png">
+    <link rel="preload" href="/assets/images/hero.png" as="image" type="image/png">
+    <link rel="modulepreload" href="/src/main.tsx" crossorigin>
+    
+    <!-- SEO Meta Tags -->
+    <title>Hero Corp - Transformação Digital para Empresas de Médio Porte</title>
+    <meta name="description" content="Especialistas em transformação digital para empresas de 50-500 funcionários. Automação, BI, integração de sistemas e IA com ROI comprovado. Resultados em 30 dias.">
+    <meta name="keywords" content="transformação digital, automação, business intelligence, integração sistemas, empresa médio porte, ROI, Hero Corp">
+    <meta name="author" content="Hero Corp">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Hero Corp - Transformação Digital para Empresas de Médio Porte">
+    <meta property="og:description" content="Especialistas em transformação digital para empresas de 50-500 funcionários. ROI médio +312% em 12 meses.">
+    <meta property="og:image" content="/og-image.jpg">
+    <meta property="og:url" content="https://herocorp.com.br">
+    <meta property="og:site_name" content="Hero Corp">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Hero Corp - Transformação Digital para Empresas de Médio Porte">
+    <meta property="twitter:description" content="Especialistas em transformação digital para empresas de 50-500 funcionários. ROI médio +312% em 12 meses.">
+    <meta property="twitter:image" content="/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#0B6EAA">
+    
+    <!-- Critical CSS inlined for performance -->
+    <style>
+      /* Critical CSS for above-the-fold content */
+      body { 
+        margin: 0; 
+        font-family: 'Roboto', system-ui, sans-serif;
+        background-color: #F9FAFB;
+      }
+      
+      /* Loading Screen Styles */
+      .loading-screen { 
+        position: fixed; 
+        inset: 0; 
+        background: linear-gradient(135deg, #F9FAFB 0%, #E8F1F8 100%);
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        z-index: 9999;
+        -webkit-backdrop-filter: blur(10px);
+                backdrop-filter: blur(10px);
+        transition: opacity 0.3s ease-out;
+      }
+      
+      .loading-content {
+        text-align: center;
+        animation: fadeInUp 0.6s ease-out;
+      }
+      
+      .logo-container {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        justify-content: center;
+        margin-bottom: 24px;
+      }
+      
+      .logo-cube {
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 14px;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+      
+      .logo-cube::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+        animation: shimmer 2s infinite;
+      }
+      
+      .logo-cube-primary {
+        background: linear-gradient(135deg, #0B6EAA 0%, #085584 100%);
+        color: white;
+        animation: pulse 2s ease-in-out infinite;
+      }
+      
+      .logo-cube-secondary {
+        background: linear-gradient(135deg, #414042 0%, #2D2D2F 100%);
+        color: #D1DE42;
+        animation: pulse 2s ease-in-out infinite 0.5s;
+      }
+      
+      .brand-text {
+        font-size: 2rem;
+        font-weight: 300;
+        color: #414042;
+        margin-bottom: 16px;
+        animation: pulse 2s ease-in-out infinite 1s;
+        letter-spacing: 0.5px;
+      }
+      
+      .loading-message {
+        font-size: 0.875rem;
+        color: #6B7280;
+        font-weight: 400;
+        animation: pulse 2s ease-in-out infinite 1.5s;
+        opacity: 0.8;
+      }
+      
+      .progress-bar {
+        width: 200px;
+        height: 2px;
+        background: rgba(11, 110, 170, 0.2);
+        border-radius: 1px;
+        margin: 20px auto 0;
+        overflow: hidden;
+        position: relative;
+      }
+      
+      .progress-fill {
+        height: 100%;
+        background: linear-gradient(90deg, #0B6EAA, #D1DE42);
+        border-radius: 1px;
+        animation: progress 2s ease-in-out infinite;
+        transform-origin: left;
+      }
+      
+      /* Animations */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      @keyframes pulse {
+        0%, 100% { 
+          opacity: 1; 
+          transform: scale(1); 
+        }
+        50% { 
+          opacity: 0.8; 
+          transform: scale(1.05); 
+        }
+      }
+      
+      @keyframes shimmer {
+        0% { left: -100%; }
+        100% { left: 100%; }
+      }
+      
+      @keyframes progress {
+        0% { transform: scaleX(0); }
+        50% { transform: scaleX(0.7); }
+        100% { transform: scaleX(1); }
+      }
+      
+      /* Reduced motion support */
+      @media (prefers-reduced-motion: reduce) {
+        .loading-content,
+        .logo-cube-primary,
+        .logo-cube-secondary,
+        .brand-text,
+        .loading-message,
+        .progress-fill {
+          animation: none;
+        }
+        
+        .logo-cube::before {
+          display: none;
+        }
+      }
+      
+      /* Responsive adjustments */
+      @media (max-width: 640px) {
+        .logo-cube {
+          width: 40px;
+          height: 40px;
+          font-size: 12px;
+        }
+        
+        .brand-text {
+          font-size: 1.5rem;
+        }
+        
+        .progress-bar {
+          width: 150px;
+        }
+      }
+    </style>
+    
+    <!-- Google Analytics (async) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GA_MEASUREMENT_ID', {
+        page_title: document.title,
+        page_location: window.location.href,
+      });
+    </script>
+    <script async src="https://assets.calendly.com/assets/external/widget.js"></script>
+  </head>
+  <body>
+    <!-- Loading screen for better perceived performance -->
+    <div id="loading-screen" class="loading-screen" role="status" aria-live="polite" aria-label="Carregando aplicação">
+      <div class="loading-content">
+        <div class="logo-container">
+          <div class="logo-cube logo-cube-primary">io</div>
+          <div class="logo-cube logo-cube-secondary">10</div>
+        </div>
+        <div class="brand-text">hero</div>
+        <div class="loading-message">Carregando experiência digital...</div>
+        <div class="progress-bar">
+          <div class="progress-fill"></div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="root"></div>
+    
+    <!-- Main script with module preload -->
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Remove loading screen after app loads -->
+    <script>
+      window.addEventListener('load', function() {
+        // Minimum loading time for better UX (matching App.tsx)
+        const minLoadTime = 1200;
+        
+        setTimeout(function() {
+          const loadingScreen = document.getElementById('loading-screen');
+          if (loadingScreen) {
+            // Fade out with smooth transition
+            loadingScreen.style.opacity = '0';
+            loadingScreen.style.transform = 'translateY(-10px)';
+            loadingScreen.style.transition = 'opacity 0.4s ease-out, transform 0.4s ease-out';
+            
+            // Remove from DOM after animation
+            setTimeout(() => {
+              loadingScreen.remove();
+              
+              // Dispatch custom event to indicate loading complete
+              window.dispatchEvent(new CustomEvent('initial-loading-complete'));
+            }, 400);
+          }
+        }, minLoadTime);
+      });
+      
+      // Handle potential errors gracefully
+      window.addEventListener('error', function() {
+        const loadingScreen = document.getElementById('loading-screen');
+        if (loadingScreen) {
+          setTimeout(() => {
+            loadingScreen.style.opacity = '0';
+            setTimeout(() => loadingScreen.remove(), 300);
+          }, 2000); // Give a bit more time on error
+        }
+      });
+    </script>
+    
+    <!-- Service Worker registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        const isDev = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+        
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js', {
+            scope: '/',
+            updateViaCache: isDev ? 'none' : 'all'
+          })
+            .then((registration) => {
+              if (isDev) {
+                console.log('[DEV] SW registered: ', registration);
+                // In development, update service worker immediately
+                registration.update();
+              } else {
+                console.log('SW registered: ', registration);
+              }
+              
+              // Handle service worker updates
+              registration.addEventListener('updatefound', () => {
+                const newWorker = registration.installing;
+                if (newWorker) {
+                  newWorker.addEventListener('statechange', () => {
+                    if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                      // New service worker available
+                      if (!isDev && confirm('Nova versão disponível. Atualizar agora?')) {
+                        window.location.reload();
+                      }
+                    }
+                  });
+                }
+              });
+            })
+            .catch((registrationError) => {
+              if (!isDev) {
+                console.log('SW registration failed: ', registrationError);
+              }
+            });
+        });
+      }
+    </script>
+  </body>
+</html>
