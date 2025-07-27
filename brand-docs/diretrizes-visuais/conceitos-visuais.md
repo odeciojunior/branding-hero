@@ -1,48 +1,63 @@
-# Conceitos Visuais da Marca HERO
+# Hero - Brand Style Guide
 
-## 1. Paleta de Cores
+A identidade de uma marca é como um sistema: cada elemento desempenha um papel essencial para garantir clareza, eficiência e resultados. Este guia foi desenvolvido para assegurar que a HERO mantenha sua imagem consistente e sua mensagem sempre precisa, onde quer que apareça.
 
-A paleta de cores da HERO deve transmitir confiança, modernidade e inovação. As cores escolhidas devem ser utilizadas de forma consistente em todos os materiais de comunicação e design. Abaixo estão as cores principais e secundárias:
+## Design da Marca
 
-- **Cor Primária:** Azul Profundo (#003366) - Representa confiança e profissionalismo.
-- **Cor Secundária:** Verde Vibrante (#66CC66) - Simboliza crescimento e inovação.
-- **Cor de Acento:** Laranja Brilhante (#FF6600) - Transmite energia e dinamismo.
-- **Neutros:** Cinza Claro (#F5F5F5) e Preto (#000000) - Para equilíbrio e legibilidade.
+O logotipo da HERO representa a transição do manual para o digital por meio da evolução tipográfica entre traços orgânicos e formas geométricas. A leitura visual de "i/o" e "10" remete à linguagem da computação, enquanto o uso de caixa baixa reforça acessibilidade e alinhamento com o ambiente digital.
 
-## 2. Tipografia
+### Paleta de cores
 
-A tipografia da HERO deve ser clara e moderna, refletindo a personalidade da marca. As fontes recomendadas são:
+**PANTONE P 106-7 C**
+- CMYK 90 55 10 0
+- RGB 0 118 170
+- HEX #0076AA
+- **Institucional**
 
-- **Fonte Principal:** Montserrat - Utilizada para títulos e chamadas, transmite modernidade e clareza.
-- **Fonte Secundária:** Open Sans - Usada para textos corridos, garantindo legibilidade e conforto na leitura.
+**PANTONE 380 C**
+- CMYK 22 0 90 0
+- RGB 209 222 66
+- HEX #D1DE42
+- **Destaque**
 
-## 3. Imagens e Ilustrações
+**PANTONE 8602 C**
+- CMYK 0 0 0 90
+- RGB 65 64 66
+- HEX #414042
+- **Neutra**
 
-As imagens utilizadas pela HERO devem refletir a essência da marca, focando em temas de transformação digital, inovação e colaboração. As diretrizes incluem:
+### Logotipo
 
-- **Fotografia:** Imagens que retratem pessoas em ambientes de trabalho colaborativos, tecnologia em uso e interações humanas.
-- **Ilustrações:** Estilo clean e moderno, com uso de ícones que representem conceitos de tecnologia e eficiência.
+[Versões do logotipo hero em positivo e negativo, com e sem tagline "transformação digital com inteligência"]
 
-## 4. Elementos Gráficos
+## Padronagem Gráfica
 
-Os elementos gráficos devem ser simples e funcionais, reforçando a identidade visual da HERO. Sugestões incluem:
+A padronagem reforça a conexão da Hero com a tecnologia, trazendo a identidade visual uma textura sutil inspirada no código binário.
 
-- **Linhas e Formas:** Uso de linhas retas e formas geométricas para transmitir estrutura e organização.
-- **Espaço em Branco:** Importância do espaço em branco para garantir clareza e foco nas informações.
+[Exemplos de padrões binários em diferentes aplicações]
 
-## 5. Aplicações da Identidade Visual
+## Tipografia Institucional
 
-A identidade visual da HERO deve ser aplicada de forma consistente em todos os materiais, incluindo:
+### Roboto
+A Roboto foi escolhida por sua legibilidade, neutralidade e ampla presença em ambientes digitais. Ela garante consistência, clareza e modernidade.
 
-- **Materiais Impressos:** Cartões de visita, brochuras e relatórios.
-- **Digital:** Website, redes sociais e apresentações.
-- **Ambientes Físicos:** Sinalização e decoração de escritórios.
+**Sua Jornada, Nossa Missão.**
 
-## 6. Diretrizes de Uso
+A HERO é uma empresa de tecnologia especializada em transformação digital, cuja essência vai além da implementação de sistemas: ela resolve problemas complexos com inteligência, proximidade e inovação.
 
-- **Consistência:** Manter a mesma paleta de cores, tipografia e estilo de imagens em todos os canais.
-- **Flexibilidade:** Adaptar a identidade visual para diferentes formatos, garantindo que a essência da marca permaneça intacta.
+Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz
+0123456789 & @ # % * ( ) [ ] { } / \ | + - = _ ^ ' : ; " < > , . ? !
 
-## Conclusão
+### Arial
+Usar apenas quando a instalação da fonte principal não for possível.
 
-Os conceitos visuais da HERO são fundamentais para construir uma identidade forte e reconhecível no mercado. A aplicação consistente dessas diretrizes ajudará a transmitir a mensagem de confiança e inovação que a marca deseja comunicar.
+**Sua Jornada, Nossa Missão.**
+
+A HERO é uma empresa de tecnologia especializada em transformação digital, cuja essência vai além da implementação de sistemas: ela resolve problemas complexos com inteligência, proximidade e inovação.
+
+Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz
+0123456789 & @ # % * ( ) [ ] { } / \ | + - = _ ^ ' : ; " < > , . ? !
+
+---
+
+Hero - Brand Style Guide • ©2025

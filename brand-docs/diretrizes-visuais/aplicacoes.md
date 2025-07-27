@@ -1,42 +1,73 @@
-# Aplicações da Identidade Visual da HERO
+# Hero - Aplicações da Identidade Visual
 
-## 1. Aplicações em Materiais Impressos
+## Aplicações em Materiais Impressos
 
-### 1.1. Cartões de Visita
-Os cartões de visita devem seguir as diretrizes de cores e tipografia estabelecidas no documento de conceitos visuais. O logotipo da HERO deve estar em destaque, com informações de contato dispostas de forma clara e legível.
+### Cartões de Visita
+- Uso obrigatório das cores institucionais
+- Logotipo em destaque seguindo as especificações do manual
+- Tipografia Roboto para informações de contato
+- Respeitar áreas de respiro do logotipo
 
-### 1.2. Papel Timbrado
-O papel timbrado deve incluir o logotipo da HERO no cabeçalho, com as cores da marca predominando. As informações de contato devem ser apresentadas na parte inferior, respeitando as margens definidas nas restrições de design.
+### Papel Timbrado
+- Logotipo no cabeçalho conforme especificações
+- Cores da paleta institucional
+- Informações de contato na parte inferior
+- Margens e espaçamentos padronizados
 
-### 1.3. Brochuras e Flyers
-As brochuras e flyers devem utilizar imagens que reflitam a essência da marca, com textos que sigam o tom de voz definido. É importante garantir que a identidade visual seja consistente em todas as páginas.
+### Brochuras e Materiais Promocionais
+- Aplicação consistente da identidade visual
+- Uso da padronagem gráfica quando apropriado
+- Tipografia institucional (Roboto principal, Arial como alternativa)
+- Imagens alinhadas com a essência da marca
 
-## 2. Aplicações Digitais
+## Aplicações Digitais
 
-### 2.1. Website
-O website da HERO deve incorporar a paleta de cores e a tipografia da marca. Elementos visuais, como botões e ícones, devem ser projetados de acordo com as diretrizes visuais, garantindo uma navegação intuitiva e uma experiência de usuário agradável.
+### Website
+- Implementação da paleta de cores completa
+- Tipografia institucional para todos os textos
+- Elementos de interface seguindo as diretrizes visuais
+- Navegação intuitiva mantendo a identidade da marca
 
-### 2.2. Redes Sociais
-As postagens nas redes sociais devem seguir um padrão visual que reflita a identidade da HERO. Isso inclui o uso de templates para imagens, stories e vídeos, além de uma linguagem que ressoe com o público-alvo.
+### Redes Sociais
+- Templates padronizados para postagens
+- Uso consistente do logotipo e cores
+- Aplicação da padronagem gráfica em backgrounds
+- Linguagem visual alinhada com o posicionamento
 
-### 2.3. Apresentações
-As apresentações devem utilizar um template padronizado que inclua o logotipo, cores e tipografia da HERO. É fundamental que as informações sejam apresentadas de forma clara e visualmente atraente, utilizando gráficos e imagens que reforcem a mensagem.
+### Apresentações Corporativas
+- Template padronizado com elementos da marca
+- Logotipo e cores institucionais
+- Tipografia Roboto para títulos e textos
+- Elementos gráficos baseados na padronagem binária
 
-## 3. Aplicações em Eventos
+## Aplicações em Eventos
 
-### 3.1. Stands e Materiais de Evento
-Os materiais de evento, como banners e displays, devem seguir as diretrizes visuais, utilizando o logotipo e a paleta de cores da HERO. É importante que a mensagem seja clara e que os elementos visuais atraiam a atenção do público.
+### Materiais de Evento
+- Banners e displays seguindo as diretrizes
+- Uso adequado do logotipo e cores
+- Padronagem gráfica como elemento de apoio
+- Visibilidade e impacto visual garantidos
 
-### 3.2. Brindes
-Os brindes devem ser escolhidos com base na identidade da marca, utilizando cores e logotipo da HERO. A escolha de brindes úteis e que reflitam a essência da marca pode fortalecer a conexão com o público.
+### Sinalização
+- Aplicação da identidade em ambientes físicos
+- Cores institucionais para destaque
+- Tipografia legível e consistente
+- Elementos gráficos de apoio quando necessário
 
-## 4. Aplicações em Comunicação Interna
+## Diretrizes Gerais de Aplicação
 
-### 4.1. Newsletters
-As newsletters internas devem seguir as diretrizes visuais, utilizando a tipografia e as cores da HERO. O conteúdo deve ser apresentado de forma clara e organizada, promovendo a cultura da empresa e mantendo os colaboradores informados.
+### Consistência Visual
+- Manutenção da paleta de cores em todas as aplicações
+- Uso exclusivo da tipografia institucional
+- Aplicação correta do logotipo
+- Respeito às proporções e espaçamentos definidos
 
-### 4.2. Materiais de Treinamento
-Os materiais de treinamento devem ser projetados de acordo com a identidade visual da HERO, garantindo que a marca esteja presente em todos os aspectos da comunicação interna. Isso inclui slides, manuais e guias.
+### Flexibilidade
+- Adaptação para diferentes formatos mantendo a essência
+- Versões do logotipo adequadas para cada aplicação
+- Uso inteligente da padronagem gráfica
+- Equilíbrio entre elementos visuais e funcionalidade
 
-## Conclusão
-A aplicação consistente da identidade visual da HERO em todos os materiais e plataformas é fundamental para reforçar a marca e criar uma conexão emocional com o público. É importante que todos os colaboradores e parceiros estejam alinhados com essas diretrizes para garantir a integridade da marca.
+---
+
+Hero - Brand Style Guide • ©2025
