@@ -4,9 +4,27 @@
 
 A HERO é uma empresa de Transformação Digital que se destaca por sua abordagem disruptiva e personalizada, focando em resolver problemas reais de empresas de médio porte através de "transformação digital com inteligência". Com o lema estratégico "Sua Jornada, Nossa Missão", a HERO quebra o paradigma das grandes consultorias ao oferecer resultados concretos em 90 dias, não em 2 anos, posicionando-se como "quem resolve" problemas complexos de tecnologia.
 
+**Manifesto Central**: "90% das transformações digitais falham porque tratam empresas como números. Nós mergulhamos no seu negócio, entendemos suas dores específicas e entregamos soluções que funcionam - em 90 dias, não em 2 anos."
+
 **Proposta de Valor Central**: "Transformação digital descomplicada, com resultados em 90 dias e um parceiro que fala sua língua."
 
 A empresa combina expertise técnica de alta qualidade com proximidade genuína, entregando soluções que vão desde otimização e automação de processos até integração de sistemas e inteligência de dados, sempre com foco em ROI mensurável e quick wins que provam valor desde o primeiro mês.
+
+### Sistema de Acrônimos Estratégicos HERO
+
+A HERO utiliza um framework sofisticado de acrônimos que permite personalizar a mensagem para diferentes stakeholders mantendo consistência da identidade central:
+
+- **Para Clientes**: **H**orizonte, **E**xpansão, **R**eceita, **O**portunidades
+- **Para Contratação**: **H**orizonte-Amplo, **E**xecução-Precisa, **R**esultado-Claro, **O**timização-Contínua  
+- **Para Relacionamento**: **H**umano, **E**ngajado, **R**ecíproco, **O**rientado
+- **Para Profissionais**: **H**olístico, **E**ficaz, **R**esiliente, **O**rientado
+
+### Metodologia HERO (H.E.R.O.)
+
+- **H**yper-Critical Analysis: Diagnóstico profundo e questionamento estratégico
+- **E**xecute: Implementação ágil com entregas tangíveis progressivas  
+- **R**esult-Oriented: Mensuração constante e validação de impacto real
+- **O**ptimize: Evolução sistemática baseada em dados e aprendizados
 
 ### Objetivos da Marca
 
