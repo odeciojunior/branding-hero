@@ -14,7 +14,7 @@ A empresa combina expertise técnica de alta qualidade com proximidade genuína,
    
 2. **Posicionamento como "O Último Consultor"**: Estabelecer a HERO como a parceira que capacita as empresas para serem autônomas, não dependentes, criando uma cultura que acelera a mudança internamente.
 
-3. **Diferenciação através de Proximidade e Resultados**: Destacar-se no mercado por oferecer o que grandes consultorias não podem: atenção personalizada, conhecimento profundo da realidade local (ES), soluções na medida certa e garantia de resultados rápidos.
+3. **Diferenciação através de Proximidade e Resultados**: Destacar-se no mercado por oferecer o que grandes consultorias não podem: atenção personalizada, ampla expertize técnica dos profissionais em contrate com consultores limitados a poucas atividades e áreas de conhecimento, soluções na medida certa e garantia de resultados rápidos.
 
 ### Público-Alvo Refinado
 
