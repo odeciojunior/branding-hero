@@ -1,5 +1,9 @@
 # Diferenciais da HERO
 
+## Sumário Executivo
+
+O mercado de transformação digital B2B atingiu $2,5 trilhões em 2024, mas enfrenta uma crise de resultados com 70-88% de taxa de falha. Esta análise revela vulnerabilidades críticas nos players estabelecidos e apresenta diferenciais disruptivos da HERO baseados em garantia de resultados, velocidade 5x superior e modelos de risco compartilhado.
+
 ## Proposta de Valor Única
 
 A HERO se destaca no mercado de transformação digital B2B por sua proposta de valor única, que combina resultados rápidos, personalização e uma abordagem consultiva. Ao contrário das grandes consultorias que oferecem soluções genéricas, a HERO se compromete a entregar resultados tangíveis em um curto espaço de tempo, com um foco especial nas necessidades específicas de cada cliente.
@@ -10,7 +14,7 @@ Um dos principais diferenciais da HERO é a garantia de resultados. A empresa of
 
 ## Velocidade de Implementação
 
-A HERO se compromete a entregar soluções em um prazo significativamente menor do que o padrão do mercado. Enquanto as grandes consultorias podem levar meses ou até anos para implementar mudanças, a HERO garante que as soluções estejam operacionais em até 90 dias. Essa agilidade permite que os clientes comecem a ver resultados rapidamente, aumentando a satisfação e a confiança na parceria.
+A HERO oferece velocidade 5x superior ao padrão do mercado. Enquanto as grandes consultorias podem levar 12-24 meses para implementar mudanças, a HERO garante que as soluções estejam operacionais em até 90 dias. Essa agilidade permite que os clientes comecem a ver resultados rapidamente, aumentando a satisfação e a confiança na parceria.
 
 ## Abordagem Personalizada
 
@@ -31,6 +35,12 @@ Além de oferecer soluções técnicas, a HERO busca criar uma conexão emociona
 ## Resultados Mensuráveis
 
 A HERO não apenas promete resultados, mas também fornece métricas claras para medir o sucesso das implementações. Com um foco em resultados mensuráveis, a HERO garante que os clientes possam acompanhar o progresso e o impacto das soluções implementadas em tempo real.
+## Modelos de Risco Compartilhado
+
+- 30% upfront para discovery
+- 40% na implementação do piloto
+- 30% baseado em resultados mensuráveis
+- Garantia de ROI projetado em 12 meses
 
 ## Conclusão
 

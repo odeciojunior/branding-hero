@@ -18,6 +18,7 @@
 ### Fontes Aprovadas
 - **Principal**: Roboto (todas as variações)
 - **Alternativa**: Arial (apenas quando Roboto não estiver disponível)
+- **Secundária**: Mona Sans (disponível em https://github.com/github/mona-sans)
 
 ### Uso Incorreto
 - ❌ Não usar outras famílias tipográficas

@@ -27,6 +27,33 @@ Os gestores enfrentam uma série de desafios e necessidades, incluindo:
 - **Integração de Sistemas**: Dificuldades em integrar sistemas legados com novas tecnologias.
 - **Automatização de Processos**: Busca por soluções que reduzam a dependência de tarefas manuais.
 - **Tomada de Decisões Baseada em Dados**: Necessidade de utilizar dados de forma inteligente para decisões mais rápidas e assertivas.
+# Oportunidade de Mercado Brasileiro
+
+O mercado de transformação digital no Brasil apresenta uma oportunidade de USD $24,13 bilhões em 2024, com projeção para crescer para $42,41 bilhões até 2030. No entanto, **51%** das PMEs brasileiras permanecem nos estágios iniciais de digitalização, criando uma lacuna significativa entre o potencial de mercado e a realidade atual.
+
+### Processos Manuais Drenam 80% do Valor Potencial
+- 73% das PMEs implementaram automação básica, mas apenas 20% analisam os dados que coletam
+- Processos manuais consomem mais de 40% do tempo produtivo da equipe
+- 97% dos relatórios gerados em sistemas legados são completamente esquecidos
+- Transferências manuais entre sistemas geram erros custosos e retrabalho constante
+
+### Sistemas Isolados Criam Gargalos Operacionais
+- Apenas 30% das empresas têm equipamentos e processos conectados
+- Custos logísticos de 15% do PIB (vs. 8-10% nos países da OCDE) devido à infraestrutura precária
+- Dados incompatíveis em formatos, estruturas e nomenclaturas diferentes
+- Silos digitais impedem visão 360° do negócio
+
+### Decisões Baseadas em Intuição, Não em Dados
+- 74% das PMEs lutam para maximizar o valor dos investimentos em dados
+- 64% encontram dificuldades para usar efetivamente dados de sistemas existentes
+- Apenas 9% das indústrias brasileiras usam Big Data para insights de clientes
+- Falta de talentos: menos de 400 PhDs em computação formados anualmente vs. 1.800 nos EUA
+
+### Resistência Cultural e Técnica
+- 66% reportam abertura dos funcionários, mas 1/3 enfrenta resistência ativa
+- 38% dos trabalhadores carecem de educação básica (CNI)
+- Apenas 32% das empresas do agronegócio superaram o gap de habilidades em IA
+- Medo de desemprego por IA paralisa adoção de automação inteligente
 
 ## Expectativas em Relação à HERO
 
