@@ -22,6 +22,7 @@ A empresa combina expertise técnica de alta qualidade com proximidade genuína,
 
 **Tomadores de Decisão**: Gestores entre 30-55 anos em posições de Diretor, Gerente ou Coordenador nas áreas de TI, RH, Jurídico, Administrativo, Compras e Projetos. São profissionais com formação superior, frequentemente complementada por pós-graduação, familiarizados com metodologias modernas (Agile, Lean, Six Sigma) e ferramentas digitais.
 
+// to-do: need review to focus on key pains of mid-sized companies in Brazil [
 **Dores Específicas Identificadas**:
 
 - Receita estagnada apesar do aumento nos gastos com marketing
@@ -30,6 +31,7 @@ A empresa combina expertise técnica de alta qualidade com proximidade genuína,
 - Investimentos em tecnologia não entregando ROI prometido
 - Concorrentes capturando market share com melhor posicionamento
 - Equipe de vendas carece de leads qualificados na região
+]  // end to-do
 
 **Sweet Spot**: PMEs que sentem que a tecnologia atual mais atrapalha que ajuda, têm processos manuais consumindo 40%+ do tempo produtivo, querem crescer mas estão travadas operacionalmente, e valorizam parceiros próximos, não fornecedores distantes.
 
@@ -39,6 +41,7 @@ A empresa combina expertise técnica de alta qualidade com proximidade genuína,
 
 **Principais Concorrentes e Vulnerabilidades**:
 
+// to-do: need review of companies acting on Brazil makert [
 **Big 4 (Accenture, Deloitte, PwC, EY)**:
 
 - Modelo: 1 Partner vende, 30 juniores executam
@@ -58,6 +61,7 @@ A empresa combina expertise técnica de alta qualidade com proximidade genuína,
 - Modelo: Vendor lock-in, conflito de canais
 - Vulnerabilidades: Expertise limitada em indústria, dependência de parceiros
 - Diferencial HERO: Agnósticos tecnológicos, escolhemos a ferramenta certa, não a que dá mais comissão
+] // end to-do
 
 **Posicionamento Único**: Enquanto os gigantes vendem complexidade, a HERO vende simplicidade que funciona. Não prometemos transformar clientes em "Amazon" ou "Uber", mas torná-los a melhor versão de si mesmos.
 
@@ -65,15 +69,17 @@ A empresa combina expertise técnica de alta qualidade com proximidade genuína,
 
 **Manifesto Central**: "90% das transformações digitais falham porque tratam empresas como números. Nós mergulhamos no seu negócio, entendemos suas dores específicas e entregamos soluções que funcionam - em 90 dias, não em 2 anos."
 
-**Promessa Principal**: "Transformação digital descomplicada, com resultados em 90 dias e um parceiro que fala sua língua."
+// to-do: need review to summary key pains in one promisse direct foward to key pains with strong emotional effect on managers and stakeholders [
+**Promessa Principal**: "Transformação digital descomplicada, um parceiro que fala sua língua, com resultados em 90 dias ou seu dinheiro de volta."
+] // end to-do
 
 **Diferenciais Únicos**:
 
 1. **Quick Wins Garantidos**: Resultados tangíveis em 30 dias ou dinheiro de volta
 2. **Metodologia HERO (H.E.R.O.)**:
-   - **H**ypothesis (Definir Resultados): Hipóteses claras e mensuráveis
+   - **H**yper critical analisys (Definir Resultados): Hipóteses claras e mensuráveis
    - **E**xecute (Implementar Mudanças): Quick wins em 30-60-90 dias
-   - **R**esult Observed (Medir Impacto): Validação rigorosa dos resultados
+   - **R**esult Oriented (Medir Impacto): Validação rigorosa dos resultados
    - **O**ptimize (Melhorar Continuamente): Refinamento contínuo
 
 3. **Linguagem Acessível**: Zero jargões corporativos, traduzimos "transformação digital" em "reduzir 60% do tempo gasto em tarefas manuais"
@@ -82,14 +88,16 @@ A empresa combina expertise técnica de alta qualidade com proximidade genuína,
    - 30% upfront para discovery
    - 40% na implementação do piloto  
    - 30% baseado em resultados mensuráveis
-   - Garantia de ROI mínimo 200% em 12 meses
+   - Garantia de ROI projetado em 12 meses
 
-**Portfolio de Quick Wins (25+ soluções)**:
+**Portfolio de Quick Wins **:
 
+// to-do: need detailed and carefully specification of quick wins, due to this are core point on confident relationship and good reputation for HERO brand [
 - Bot de Processamento: ROI 400% em 30 dias
 - Dashboard Gerencial: ROI 300% em 45 dias
 - Integração ERP-CRM: ROI 350% em 45 dias
 - Automação de Processos: ROI 250-400% em 30-60 dias
+] //end to-do
 
 ### Diretrizes de Comunicação Disruptiva
 
@@ -111,23 +119,31 @@ A empresa combina expertise técnica de alta qualidade com proximidade genuína,
 
 **Para Gerentes Operacionais**: "Menos planilhas, menos retrabalho, menos dor de cabeça. Automatizamos o chato para você focar no estratégico."
 
+**Para Time Operacionais**: "Conhecimento compartilhado, juntos na trincheira, sair melhor do que entramos."
+
 **Evitar Absolutamente**:
 
 - Jargões vazios ("reimaginar", "transformar", "soluções end-to-end")
 - Promessas vagas de "eficiência" sem números
 - Linguagem intimidadora ou condescendente
-- Analogias com super-heróis de quadrinhos
+- Trazer o símbolo "Hero" como algo fantasioso, sobre humano ou analogias infantis com super-heróis de quadrinhos
+
+**Fortalece o discurso**:
+
+- Utilizar conceitos de heróis da vida real, pessoas que nos inspiram a ir além com seus exemplos e biografias 
+- Mostrar o lado humano e real da Hero. Em vez de sorrisos e paixão genéricos, serão compartilhadas histórias de projetos desafiadores, os "perrengues" que a equipe enfrentou, os obstáculos superados e como "deram a volta por cima"
+- Apresentar os cases de sucesso por um lado menos romântico e mais autêntico. Isso construirá uma conexão emocional autêntica e demonstrará resiliência e competência.
 
 ### Metas e KPIs Estratégicos
 
 **Objetivos de Negócio Ambiciosos**:
 
 - **5 anos**: Referência absoluta em transformação digital no Espírito Santo
-- **10 anos**: Reconhecimento nacional como empresa de tecnologia de alta competência técnica
+- **10 anos**: Reconhecimento nacional como empresa de tecnologia de alta competência em transformação digital
 - **Posicionamento**: "Chame a HERO, ela resolve" - associação automática com resolução de problemas complexos
 
 **KPIs de Branding e Marketing**:
-
+// to-do: need review and data analysis of numbres to set possible goals [
 - Taxa de lembrança espontânea da marca: >80% no ES em 18 meses
 - Conversão site para lead qualificado: >8% (mercado: 2-4%)
 - Ciclo de vendas B2B: <45 dias (vs 90-120 dias do mercado)
@@ -146,6 +162,7 @@ A empresa combina expertise técnica de alta qualidade com proximidade genuína,
 - Reconhecimento como "empresa que resolve": >95% em pesquisas
 - Associação com proximidade vs grandes consultorias: >85%
 - Percepção de valor vs preço: "justo" ou "barato" em >80% dos casos
+] end to-do
 
 ### Framework de Acrônimos Estratégicos HERO
 
@@ -154,13 +171,18 @@ A empresa combina expertise técnica de alta qualidade com proximidade genuína,
 **Para Clientes**: **H**orizonte, **E**xpansão, **R**eceita, **O**portunidades
 **Para Contratação**: **H**orizonte-Amplo, **E**xecução-Precisa, **R**esultado-Claro, **O**timização-Contínua  
 **Para Relacionamento**: **H**umano, **E**ngajado, **R**ecíproco, **O**rientado
-**Para Profissionais**: **H**olístico, **E**ficaz, **R**esiliente, **O**rientado
+**Para Soft-Skills do Time**: **H**olístico, **E**ficaz, **R**esiliente, **O**rientado
 
 Este sistema cria uma linguagem única no mercado, aumentando memorabilidade e diferenciação competitiva.
 
 ### Conclusão Estratégica
 
-A HERO está posicionada para criar uma nova categoria no mercado brasileiro: **"Parceiros de Transformação para PMEs"**.
+A HERO está posicionada para criar uma nova categoria no mercado brasileiro: **"Empresas Enxutas com Alto Impacto em Transformação para PMEs"**. Para isso a combinação de profissionais "fusionistas" é importantíssima.
+
+Explicando o neo-conceito "Fusionista":
+Integração de Competências: fusão de diversas áreas de conhecimento – unindo expertise em tecnologia a habilidades interpessoais e insights comportamentais. Um profissional capaz de navegar com agilidade entre demandas técnicas (hard skills) e relações humanas (soft skills).
+Agilidade e Adaptação: habilidade de aprender rapidamente, adotar boas práticas e reagir com eficiência a mudanças constantes. Essa versatilidade é essencial para o profissional contemporâneo, que precisa se reinventar a todo momento.
+Criação de Valor: ao reunir múltiplas competências, o Fusionista gera valor de forma holística, transformando desafios em oportunidades e promovendo mudanças positivas em diversas áreas de atuação.
 
 Com 70-88% de falhas em transformação digital e um mercado de R$ 2,5 trilhões, existe um espaço imenso para um player que:
 
@@ -169,8 +191,6 @@ Com 70-88% de falhas em transformação digital e um mercado de R$ 2,5 trilhões
 - Cobra de forma justa e transparente
 - Permanece ao lado do cliente durante toda a jornada
 
-**Nossa Promessa Não Negociável**: Não prometemos transformar clientes em "Amazon" ou "Uber". Prometemos torná-los a melhor versão de si mesmos: mais ágeis, mais inteligentes, mais lucrativos.
+**O que nos motiva**: Estamos comprometidos em colaborar para empresas e profissionais a atingirem a boa performance, equilibrando crescimento, sustentabilidade, saúde, bem-estar e respeito ao meio em que vivemos. A sua melhor versão!**
 
-**Porque toda PME merece acesso a transformação digital de qualidade. E toda jornada de sucesso merece um parceiro de verdade.**
-
-> "Sua Jornada, Nossa Missão. Vamos resolver juntos?"
+**Sua empresa merece transformação digital com inteligência e isso fica melhor com um parceiro de verdade. Sua jornada, nossa missão.**"
