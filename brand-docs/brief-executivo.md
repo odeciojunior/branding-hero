@@ -12,6 +12,8 @@ A empresa combina expertise técnica de alta qualidade com proximidade genuína,
 
 ### Sistema de Acrônimos Estratégicos HERO
 
+Os acrônimos HERO representam mais do que uma ferramenta de branding: são a manifestação tangível da proposta de valor em diferentes contextos e perspectivas. Este framework permite comunicar nossa essência de forma consistente e adaptável, criando uma linguagem única que ressoa com diversos stakeholders ao longo da jornada de transformação digital.
+
 A HERO utiliza um framework sofisticado de acrônimos que permite personalizar a mensagem para diferentes stakeholders mantendo consistência da identidade central:
 
 - **Para Clientes**: **H**orizonte, **E**xpansão, **R**eceita, **O**portunidades

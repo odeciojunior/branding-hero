@@ -1,9 +1,12 @@
 # Conteúdo do arquivo: /hero-branding-brief/hero-branding-brief/src/estrategia-comunicacao/argumentacao-vendas.md
 
 ## Argumentação de Vendas para HERO
+## Sumário Executivo
+
+A argumentação de vendas da HERO deve refletir sua ousadia e confiança, demonstrando profunda expertise técnica e histórico comprovado na solução de desafios de transformação digital para PMEs. A abordagem deve desmistificar a complexidade tecnológica, usar linguagem acessível e destacar a promessa central de "transformação digital com inteligência" para gerar impacto imediato.
 
 ### Introdução
-A argumentação de vendas é uma ferramenta essencial para comunicar de forma eficaz o valor da HERO aos potenciais clientes. Este documento apresenta estratégias e mensagens que podem ser utilizadas para destacar os diferenciais da HERO no mercado de transformação digital.
+ A argumentação de vendas é uma ferramenta essencial para comunicar de forma eficaz o valor da HERO aos potenciais clientes. Este documento apresenta estratégias e mensagens que podem ser utilizadas para destacar os diferenciais da HERO no mercado de transformação digital.
 
 ### Proposta de Valor
 **Transformação digital descomplicada, com resultados em 90 dias e um parceiro que fala sua língua.**

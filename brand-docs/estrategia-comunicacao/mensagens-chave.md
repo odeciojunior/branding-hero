@@ -1,4 +1,7 @@
 # Mensagens-Chave Estratégicas para a HERO
+## Sumário Executivo
+
+A comunicação da HERO deve ser imediatamente reconhecível pela sua ousadia e confiança, refletindo sua profunda expertise técnica e histórico comprovado em solucionar os complexos desafios de transformação digital das PMEs. A linguagem deve ecoar a promessa central de "transformação digital com inteligência", aplicada com proximidade e clareza para desmistificar a complexidade tecnológica e gerar resultados eficazes.
 
 ## Framework de Comunicação Central
 
