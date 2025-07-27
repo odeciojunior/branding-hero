@@ -1,96 +1,49 @@
-# Hero - Brand Style Guide
+# Conceitos Visuais da HERO
 
-A identidade de uma marca é como um sistema: cada elemento desempenha um papel essencial para garantir clareza, eficiência e resultados. Este guia foi desenvolvido para assegurar que a HERO mantenha sua imagem consistente e sua mensagem sempre precisa, onde quer que apareça.
+A identidade visual da HERO foi projetada para traduzir visualmente a essência da marca: uma jornada de transformação digital que é ao mesmo tempo humana, inteligente e precisa. Cada elemento, da tipografia à paleta de cores, conta uma parte dessa história.
 
-## Design da Marca
+## 1. O Logo: A Narrativa da Transformação
 
-O logotipo da HERO representa a transição do manual para o digital por meio da evolução tipográfica entre traços orgânicos e formas geométricas. A leitura visual de "i/o" e "10" remete à linguagem da computação, enquanto o uso de caixa baixa reforça acessibilidade e alinhamento com o ambiente digital.
+O logotipo da HERO é o pilar central da identidade visual e encapsula a promessa da marca.
 
-### Paleta de cores
+*   **Evolução Tipográfica:** O design do logo representa a jornada da transformação digital. Ele começa com um traço **fluido e orgânico** (representando processos manuais e a intuição humana) e evolui para uma forma **precisa e geométrica** (simbolizando a digitalização, eficiência e tecnologia).
+    *   As letras "h" e "e" são mais orgânicas.
+    *   O "r" marca a transição.
+    *   O "o" final é totalmente geométrico, representando o resultado final da transformação.
 
-**PANTONE P 106-7 C**
-- CMYK 90 55 10 0
-- RGB 0 118 170
-- HEX #0076AA
-- **Institucional**
+*   **Significados Ocultos (Tecnologia e Excelência):** A transição entre o "r" e o "o" cria múltiplas leituras que reforçam a expertise técnica da HERO:
+    *   **"io":** Uma referência direta ao conceito de Input/Output, fundamental na computação.
+    *   **"10":** Simboliza excelência, perfeição e remete ao sistema de código binário (1 e 0), a base de toda a linguagem computacional.
 
-**PANTONE 380 C**
-- CMYK 22 0 90 0
-- RGB 209 222 66
-- HEX #D1DE42
-- **Destaque**
+*   **Proximidade (Uso de Caixa Baixa):** A escolha de "hero" em minúsculas é intencional para transmitir:
+    *   **Acessibilidade e Proximidade:** Quebra a rigidez do mundo corporativo tradicional.
+    *   **Conexão com o Digital:** Reflete a linguagem de interfaces, comandos e códigos, que são majoritariamente em caixa baixa.
 
+## 2. Paleta de Cores: Confiança, Inovação e Solidez
 
-**PANTONE 8602 C**
-- CMYK 0 0 0 90
-- RGB 65 64 66
-- HEX #414042
-- **Neutra**
+A paleta de cores foi escolhida para equilibrar confiança profissional com um toque de dinamismo e inovação.
 
-## Storytelling da Construção do Logotipo
+*   **Azul (Cor Institucional - #1B6FB8):**
+    *   **Atributos:** Confiança, inteligência, estratégia e clareza.
+    *   **Uso:** Cor principal, representa a segurança e a expertise da HERO.
 
-Analisando o PDF de identidade visual da Hero, aqui está o storytelling da construção do logo:
+*   **Amarelo-Lima (Cor de Destaque - #E7C547):**
+    *   **Atributos:** Inovação, dinamismo, atitude e transformação.
+    *   **Uso:** Para elementos de destaque, CTAs e pontos que necessitam de atenção, injetando energia na marca.
 
-### 1. O Conceito de Transformação
-A tipografia foi desenvolvida para expressar visualmente o conceito de transformação digital. O traço começa fluido, orgânico e manuscrito (representando processos manuais) e gradualmente se torna mais preciso e geométrico (representando a digitalização).
+*   **Cinza Escuro (Cor Base - #2D3748):**
+    *   **Atributos:** Estabilidade, seriedade, organização e solidez técnica.
+    *   **Uso:** Para textos e como base de contraste, reforçando a presença técnica da HERO com discrição.
 
-### 2. A Evolução das Letras
-- "h" e "e": Começam orgânicas, representando o estado inicial manual
-- "r": Marca a transição
-- "o": Totalmente geométrico, representa o resultado final da transformação
+## 3. Tipografia: Clareza e Modernidade
 
-### 3. Significados Ocultos
-A transição entre "r" e "o" cria múltiplas leituras:
-- "io": Input/Output - símbolo clássico da computação
-- "10": Representa excelência e perfeição
-- Código binário: Referência aos fundamentos da linguagem computacional
+*   **Fonte Principal (Títulos): Inter** (Bold, Extra Bold)
+    *   Uma fonte moderna, versátil e com excelente legibilidade, ideal para transmitir clareza e impacto.
+*   **Fonte de Corpo:** **Roboto** (Regular, Medium)
+    *   Garante alta legibilidade em textos longos e em diversas plataformas.
 
-### 4. Escolha Tipográfica
-A marca usa caixa baixa para transmitir:
-- Proximidade e acessibilidade
-- Conexão com a linguagem digital (interfaces e códigos)
-- Quebra da rigidez corporativa tradicional
+## 4. Estilo Visual Geral
 
-### 5. Paleta de Cores
-- Azul: Confiança, inteligência e estratégia
-- Amarelo-lima: Inovação, dinamismo e transformação
-- Cinza escuro: Estabilidade, seriedade e base técnica
-
-### 6. Narrativa Visual Completa
-O logo conta a história de uma jornada que começa intuitiva e humana, passa por um processo de transformação e termina precisa e digital - exatamente o que a Hero promete entregar aos seus clientes: transformação digital com inteligência.
-
-### Logotipo
-
-[Versões do logotipo hero em positivo e negativo, com e sem tagline "transformação digital com inteligência"]
-
-## Padronagem Gráfica
-
-A padronagem reforça a conexão da Hero com a tecnologia, trazendo a identidade visual uma textura sutil inspirada no código binário.
-
-[Exemplos de padrões binários em diferentes aplicações]
-
-## Tipografia Institucional
-
-### Roboto
-A Roboto foi escolhida por sua legibilidade, neutralidade e ampla presença em ambientes digitais. Ela garante consistência, clareza e modernidade.
-
-**Sua Jornada, Nossa Missão.**
-
-A HERO é uma empresa de tecnologia especializada em transformação digital, cuja essência vai além da implementação de sistemas: ela resolve problemas complexos com inteligência, proximidade e inovação.
-
-Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz
-0123456789 & @ # % * ( ) [ ] { } / \ | + - = _ ^ ' : ; " < > , . ? !
-
-### Arial
-Usar apenas quando a instalação da fonte principal não for possível.
-
-**Sua Jornada, Nossa Missão.**
-
-A HERO é uma empresa de tecnologia especializada em transformação digital, cuja essência vai além da implementação de sistemas: ela resolve problemas complexos com inteligência, proximidade e inovação.
-
-Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz
-0123456789 & @ # % * ( ) [ ] { } / \ | + - = _ ^ ' : ; " < > , . ? !
-
----
-
-Hero - Brand Style Guide • ©2025
+*   **Design:** Moderno, limpo e preciso.
+*   **Layout:** Minimalista, com uso estratégico de espaço em branco para focar no conteúdo. Sobreposições de seções podem ser usadas para criar um efeito visual dinâmico, sem perder a seriedade.
+*   **Imagens:** Fotografias autênticas de equipes colaborando e ambientes de trabalho reais, evitando imagens de banco de imagens genéricas. O foco é em pessoas reais resolvendo problemas reais.

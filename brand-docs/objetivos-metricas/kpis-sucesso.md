@@ -1,43 +1,33 @@
-# KPIs de Sucesso para o Branding da HERO
+# KPIs de Sucesso da HERO
 
-## Introdução
+Os KPIs (Key Performance Indicators) são métricas essenciais que nos permitirão avaliar o sucesso da estratégia de branding e de negócio da HERO. Eles estão divididos em quatro áreas principais: Branding e Marketing, Entrega e Resultados, Diferenciação de Mercado e Impacto no Negócio.
 
-Os KPIs (Key Performance Indicators) são métricas essenciais que nos permitirão avaliar o sucesso da estratégia de branding da HERO. Eles nos ajudarão a monitorar o progresso em direção aos objetivos de negócios e a ajustar as ações conforme necessário para garantir que a marca atinja seu potencial máximo no mercado.
+## 1. KPIs de Branding e Marketing
 
-## KPIs Propostos
+*   **Taxa de Lembrança Espontânea da Marca:** >80% no Espírito Santo em 18 meses.
+*   **Taxa de Conversão (Site para Lead Qualificado):** >8% (Média de mercado: 2-4%).
+*   **Custo por Lead Qualificado (CPL):** Reduzir em 20% a cada semestre.
+*   **Engajamento nas Redes Sociais (LinkedIn):** Aumento de 50% no engajamento por postagem a cada trimestre.
+*   **Net Promoter Score (NPS):** Manter acima de 70 (Classe Mundial).
 
-1. **Reconhecimento de Marca**
-   - **Métrica**: Percentual de aumento no reconhecimento da marca em pesquisas de mercado.
-   - **Objetivo**: Aumentar o reconhecimento da marca HERO em 30% nos próximos 12 meses.
+## 2. KPIs de Entrega e Resultados
 
-2. **Engajamento nas Redes Sociais**
-   - **Métrica**: Taxa de engajamento (curtidas, comentários, compartilhamentos) nas postagens da HERO.
-   - **Objetivo**: Atingir uma taxa de engajamento de 5% em todas as plataformas sociais até o final do ano.
+*   **Taxa de Sucesso em Projetos:** >90% (Média de mercado: 30%).
+*   **ROI Médio Entregue aos Clientes:** >250% em 12 meses.
+*   **Time-to-Value (Tempo para o primeiro Quick Win):** <30 dias.
+*   **Taxa de Renovação de Contratos:** >85%.
+*   **Índice de Satisfação do Cliente (CSAT):** Manter acima de 95% após a conclusão de cada projeto.
 
-3. **Leads Qualificados**
-   - **Métrica**: Número de leads qualificados gerados através de campanhas de branding.
-   - **Objetivo**: Gerar 200 leads qualificados por trimestre a partir de iniciativas de branding.
+## 3. KPIs de Diferenciação de Mercado
 
-4. **Satisfação do Cliente**
-   - **Métrica**: Índice de satisfação do cliente (CSAT) medido através de pesquisas pós-interação.
-   - **Objetivo**: Manter um CSAT acima de 85% em todas as interações com clientes.
+*   **% de Clientes que Recomendam Ativamente:** >90%.
+*   **Reconhecimento como "Empresa que Resolve":** >95% em pesquisas de percepção de marca.
+*   **Associação com Proximidade vs. Grandes Consultorias:** >85%.
+*   **Percepção de Valor vs. Preço:** Ser percebido como "justo" ou "excelente" em >80% dos feedbacks de clientes.
 
-5. **Taxa de Conversão**
-   - **Métrica**: Percentual de leads que se tornam clientes após interações com a marca.
-   - **Objetivo**: Aumentar a taxa de conversão em 20% nos próximos 6 meses.
+## 4. KPIs de Impacto no Negócio
 
-6. **Retenção de Clientes**
-   - **Métrica**: Percentual de clientes que continuam a utilizar os serviços da HERO após 12 meses.
-   - **Objetivo**: Atingir uma taxa de retenção de 75% ao final do primeiro ano.
-
-7. **Participação de Mercado**
-   - **Métrica**: Percentual de participação de mercado da HERO em comparação com concorrentes diretos.
-   - **Objetivo**: Aumentar a participação de mercado em 10% nos próximos 2 anos.
-
-8. **Feedback Qualitativo**
-   - **Métrica**: Análise de feedback qualitativo de clientes e stakeholders sobre a percepção da marca.
-   - **Objetivo**: Coletar e analisar feedback trimestralmente para identificar áreas de melhoria.
-
-## Conclusão
-
-Estes KPIs fornecerão uma estrutura clara para medir o sucesso da estratégia de branding da HERO. Acompanhando essas métricas, poderemos garantir que a marca não apenas atinja seus objetivos, mas também se posicione como uma líder confiável e inovadora no mercado de transformação digital.
+*   **Crescimento da Receita Anual:** Aumento de 40% ano a ano.
+*   **Ciclo de Vendas B2B:** Reduzir para <45 dias (Média de mercado: 90-120 dias).
+*   **Customer Lifetime Value (CLV):** Aumentar em 30% anualmente.
+*   **Market Share no Espírito Santo (PMEs):** Atingir 15% em 3 anos.

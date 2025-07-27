@@ -1,73 +1,48 @@
-# Hero - Aplicações da Identidade Visual
+# Aplicações da Marca HERO
 
-## Aplicações em Materiais Impressos
+A consistência na aplicação da identidade visual é crucial para construir o reconhecimento e a confiança na marca HERO. Abaixo estão as diretrizes para a aplicação da marca em diferentes contextos e materiais.
+
+## 1. Materiais Digitais
+
+### Website e Landing Pages
+
+*   **Header:** O logotipo da HERO deve estar posicionado no canto superior esquerdo.
+*   **Cores:** O azul institucional deve ser predominante, com o amarelo-lima usado para botões de CTA primários e links importantes. O fundo principal deve ser branco ou um cinza muito claro para garantir a legibilidade.
+*   **Tipografia:** Seguir a hierarquia de fontes (Inter para títulos, Roboto para corpo) para garantir clareza e consistência.
+*   **Favicon:** Utilizar uma versão simplificada do logo, como o "o" geométrico ou as iniciais "h/o", para garantir a legibilidade em tamanhos pequenos.
+
+### Redes Sociais (LinkedIn, etc.)
+
+*   **Avatar/Foto de Perfil:** O logotipo da HERO em sua versão principal ou uma variante quadrada, garantindo a visibilidade em formatos pequenos.
+*   **Imagens de Capa:** Devem usar a paleta de cores da marca e podem incluir o logotipo junto com o lema "Sua Jornada, Nossa Missão".
+*   **Templates de Postagem:** Criar templates com o logo e as cores da marca para manter a consistência visual em todas as publicações.
+
+### Apresentações (Pitch Decks, Propostas)
+
+*   **Slide Mestre:** Deve conter o logotipo da HERO em uma posição fixa (canto inferior direito, por exemplo) e seguir a paleta de cores e tipografia da marca.
+*   **Gráficos e Infográficos:** Devem ser criados utilizando a paleta de cores da HERO para reforçar a identidade visual.
+
+### Assinatura de E-mail
+
+*   **Estrutura:** Incluir o logotipo da HERO, nome do remetente, cargo, telefone e um link para o site. Manter um design limpo e profissional.
+
+## 2. Materiais Impressos
 
 ### Cartões de Visita
-- Uso obrigatório das cores institucionais
-- Logotipo em destaque seguindo as especificações do manual
-- Tipografia Roboto para informações de contato
-- Respeitar áreas de respiro do logotipo
 
-### Papel Timbrado
-- Logotipo no cabeçalho conforme especificações
-- Cores da paleta institucional
-- Informações de contato na parte inferior
-- Margens e espaçamentos padronizados
+*   **Frente:** Logotipo da HERO em destaque sobre fundo branco ou azul.
+*   **Verso:** Informações de contato (nome, cargo, e-mail, telefone, site) com tipografia clara e alinhada à identidade da marca.
 
-### Brochuras e Materiais Promocionais
-- Aplicação consistente da identidade visual
-- Uso da padronagem gráfica quando apropriado
-- Tipografia institucional (Roboto principal, Arial como alternativa)
-- Imagens alinhadas com a essência da marca
+### Papelaria (Papel Timbrado, Envelopes)
 
-## Aplicações Digitais
+*   O logotipo deve ser aplicado de forma discreta, geralmente no cabeçalho ou rodapé, para não interferir no conteúdo principal.
 
-### Website
-- Implementação da paleta de cores completa
-- Tipografia institucional para todos os textos
-- Elementos de interface seguindo as diretrizes visuais
-- Navegação intuitiva mantendo a identidade da marca
+### Materiais de Eventos (Banners, Folders)
 
-### Redes Sociais
-- Templates padronizados para postagens
-- Uso consistente do logotipo e cores
-- Aplicação da padronagem gráfica em backgrounds
-- Linguagem visual alinhada com o posicionamento
+*   **Banners:** O logotipo e a mensagem principal devem ser grandes e legíveis à distância. Utilizar o azul institucional como cor de fundo para maior impacto.
+*   **Folders e Brochuras:** Devem seguir a estrutura visual do site, com uma hierarquia clara de informações, uso consistente de cores e tipografia.
 
-### Apresentações Corporativas
-- Template padronizado com elementos da marca
-- Logotipo e cores institucionais
-- Tipografia Roboto para títulos e textos
-- Elementos gráficos baseados na padronagem binária
+## 3. Brindes e Materiais Promocionais
 
-## Aplicações em Eventos
-
-### Materiais de Evento
-- Banners e displays seguindo as diretrizes
-- Uso adequado do logotipo e cores
-- Padronagem gráfica como elemento de apoio
-- Visibilidade e impacto visual garantidos
-
-### Sinalização
-- Aplicação da identidade em ambientes físicos
-- Cores institucionais para destaque
-- Tipografia legível e consistente
-- Elementos gráficos de apoio quando necessário
-
-## Diretrizes Gerais de Aplicação
-
-### Consistência Visual
-- Manutenção da paleta de cores em todas as aplicações
-- Uso exclusivo da tipografia institucional
-- Aplicação correta do logotipo
-- Respeito às proporções e espaçamentos definidos
-
-### Flexibilidade
-- Adaptação para diferentes formatos mantendo a essência
-- Versões do logotipo adequadas para cada aplicação
-- Uso inteligente da padronagem gráfica
-- Equilíbrio entre elementos visuais e funcionalidade
-
----
-
-Hero - Brand Style Guide • ©2025
+*   **Aplicação:** O logotipo deve ser aplicado de forma que garanta a legibilidade e o reconhecimento da marca, seja em canetas, cadernos, camisetas ou outros itens.
+*   **Qualidade:** A escolha dos materiais deve refletir a qualidade e o profissionalismo da HERO.

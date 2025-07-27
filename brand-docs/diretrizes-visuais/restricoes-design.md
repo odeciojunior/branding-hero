@@ -1,94 +1,34 @@
-# Hero - Restrições e Diretrizes de Uso
+# Restrições de Design e Uso da Marca HERO
 
-## Restrições de Cores
+Para manter a consistência, a força e a integridade da identidade visual da HERO, é fundamental seguir as restrições de design detalhadas abaixo. O uso inadequado do logotipo e dos elementos da marca pode diluir seu impacto e confundir a percepção do público.
 
-### Paleta Obrigatória
-- **PANTONE P 106-7 C** (Institucional): #0076AA
-- **PANTONE 380 C** (Destaque): #D1DE42  
-- **PANTONE 8602 C** (Neutra): #414042
+## 1. Uso do Logotipo
 
-### Uso Incorreto
-- ❌ Não alterar as cores especificadas
-- ❌ Não usar cores fora da paleta institucional
-- ❌ Não aplicar gradientes não autorizados
-- ❌ Não reduzir contraste abaixo dos padrões de acessibilidade
+*   **Não alterar as proporções:** O logotipo nunca deve ser esticado ou comprimido. Mantenha sempre a sua proporção original.
+*   **Não alterar as cores:** Utilize apenas as cores definidas na paleta oficial. Não aplique gradientes, sombras ou outros efeitos que não façam parte da identidade padrão.
+*   **Não rotacionar:** O logotipo deve ser sempre apresentado em sua orientação horizontal padrão.
+*   **Não alterar a tipografia:** A fonte do logotipo é um design customizado e não deve ser recriada ou modificada.
+*   **Respeitar a área de respiro:** Mantenha um espaço mínimo ao redor do logotipo, livre de outros elementos gráficos ou texto. A medida de respiro é equivalente à altura da letra "o" do logo.
 
-## Restrições de Tipografia
+## 2. Paleta de Cores
 
-### Fontes Aprovadas
-- **Principal**: Roboto (todas as variações)
-- **Alternativa**: Arial (apenas quando Roboto não estiver disponível)
-- **Secundária**: Mona Sans (disponível em https://github.com/github/mona-sans)
+*   **Uso Consistente:** O azul institucional (#1B6FB8) deve ser a cor predominante na maioria das comunicações. O amarelo-lima (#E7C547) deve ser usado como cor de destaque para CTAs e elementos importantes. O cinza escuro (#2D3748) é a cor padrão para textos.
+*   **Não introduzir novas cores:** Não adicione cores que não pertençam à paleta oficial da marca, a menos que seja para um contexto específico e aprovado (como gráficos ou ilustrações que sigam um guia de estilo próprio).
 
-### Uso Incorreto
-- ❌ Não usar outras famílias tipográficas
-- ❌ Não distorcer ou modificar as proporções das fontes
-- ❌ Não usar espaçamentos incorretos entre caracteres
-- ❌ Não aplicar efeitos tipográficos não autorizados
+## 3. Tipografia
 
-## Restrições do Logotipo
+*   **Hierarquia Clara:** Utilize as fontes **Inter** para títulos e **Roboto** para corpo de texto, seguindo a hierarquia de peso e tamanho definida no guia de conceitos visuais. Não misture outras fontes na comunicação padrão.
+*   **Legibilidade:** Garanta que o texto seja sempre legível, com contraste adequado em relação ao fundo.
 
-### Área de Respiro
-- Manter espaçamento mínimo equivalente à altura da letra "h" do logotipo
-- Aplicar em todos os lados do logotipo
+## 4. Imagens e Estilo Fotográfico
 
-### Uso Incorreto
-- ❌ Não redimensionar desproporcionalmente
-- ❌ Não alterar cores ou elementos
-- ❌ Não adicionar contornos ou sombras
-- ❌ Não sobrepor outros elementos na área de respiro
-- ❌ Não usar sobre fundos que comprometam a legibilidade
-- ❌ Não inclinar, distorcer ou modificar a geometria
+*   **Evitar Imagens Genéricas:** Não utilize fotos de banco de imagens que pareçam falsas ou encenadas. A HERO valoriza a autenticidade.
+*   **Foco em Pessoas Reais:** Prefira imagens que mostrem a equipe da HERO em ação, colaborando e resolvendo problemas. O foco é na interação humana e na competência técnica, não em sorrisos forçados.
 
-## Restrições de Aplicação
+## Exemplos de Uso Incorreto
 
-### Tamanho Mínimo
-- **Impressão**: 15mm de largura
-- **Digital**: 60px de largura
-- **Aplicações especiais**: consultar manual técnico
-
-### Fundos e Contrastes
-- ✅ Usar versão adequada para cada tipo de fundo
-- ✅ Garantir contraste mínimo para acessibilidade
-- ❌ Não usar sobre imagens complexas sem tratamento
-- ❌ Não aplicar sobre fundos com ruído visual
-
-## Elementos Gráficos
-
-### Padronagem Binária
-- ✅ Usar apenas os padrões aprovados
-- ✅ Aplicar com transparência adequada
-- ❌ Não modificar os padrões existentes
-- ❌ Não criar novos padrões sem aprovação
-
-### Imagens
-- ✅ Usar imagens que reflitam a essência tecnológica da marca
-- ✅ Manter qualidade e resolução adequadas
-- ❌ Não usar imagens que contradigam o posicionamento
-- ❌ Não aplicar filtros que alterem as cores da marca
-
-## Processo de Aprovação
-
-### Materiais que Requerem Aprovação
-- Novos layouts ou templates
-- Aplicações especiais do logotipo
-- Materiais para eventos ou campanhas específicas
-- Adaptações para mídias não convencionais
-
-### Contato para Aprovações
-- Equipe de branding da HERO
-- Documentar exceções quando aprovadas
-
-## Verificação de Conformidade
-
-### Checklist Obrigatório
-- [ ] Cores conforme paleta institucional
-- [ ] Tipografia aprovada
-- [ ] Logotipo com área de respiro adequada
-- [ ] Tamanho mínimo respeitado
-- [ ] Contraste adequado para acessibilidade
-- [ ] Elementos gráficos aprovados
-
----
-
-Hero - Brand Style Guide • ©2025
+*   **Logotipo distorcido.**
+*   **Logotipo com cores não oficiais.**
+*   **Logotipo sobre um fundo poluído que compromete a legibilidade.**
+*   **Texto em fontes não autorizadas.**
+*   **Uso excessivo da cor de destaque, diminuindo seu impacto.**
