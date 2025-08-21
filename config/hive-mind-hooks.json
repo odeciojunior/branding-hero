@@ -1,0 +1,204 @@
+{
+  "hooksConfiguration": {
+    "enabled": true,
+    "version": "2.0.0",
+    "executionMode": "parallel",
+    "failureMode": "continue-on-error",
+    "timeout": 30000
+  },
+  "preOperationHooks": {
+    "pre-task": {
+      "enabled": true,
+      "priority": 1,
+      "command": "npx claude-flow@alpha hooks pre-task",
+      "parameters": {
+        "description": "{task.description}",
+        "agent": "{agent.type}",
+        "sessionId": "{session.id}"
+      },
+      "actions": [
+        "validate-agent-capability",
+        "prepare-resources",
+        "load-context",
+        "initialize-memory-namespace"
+      ]
+    },
+    "session-restore": {
+      "enabled": true,
+      "priority": 2,
+      "command": "npx claude-flow@alpha hooks session-restore",
+      "parameters": {
+        "sessionId": "branding-hero-{timestamp}",
+        "namespace": "branding-hero"
+      },
+      "actions": [
+        "restore-agent-states",
+        "load-shared-memory",
+        "rebuild-coordination-graph",
+        "sync-neural-weights"
+      ]
+    },
+    "auto-assign": {
+      "enabled": true,
+      "priority": 3,
+      "triggers": ["file-operation", "task-creation"],
+      "rules": {
+        "*.html|*.css|*.js": ["coder", "reviewer"],
+        "*.md": ["researcher", "content-strategist"],
+        "brand-docs/**": ["researcher", "brand-strategist"],
+        "assets/docs/**": ["analyst", "content-creator"],
+        "performance-analysis": ["performance-benchmarker"],
+        "design-review": ["creative-director", "reviewer"]
+      }
+    }
+  },
+  "duringOperationHooks": {
+    "post-edit": {
+      "enabled": true,
+      "triggers": ["file-write", "file-edit"],
+      "command": "npx claude-flow@alpha hooks post-edit",
+      "parameters": {
+        "file": "{file.path}",
+        "agent": "{agent.id}",
+        "memoryKey": "branding-hero/{agent.type}/{task.id}",
+        "change": "{change.summary}"
+      },
+      "actions": [
+        "update-shared-memory",
+        "notify-collaborating-agents", 
+        "train-neural-patterns",
+        "validate-changes"
+      ]
+    },
+    "notify": {
+      "enabled": true,
+      "triggers": ["milestone-completion", "error-occurrence", "state-change"],
+      "command": "npx claude-flow@alpha hooks notify",
+      "parameters": {
+        "message": "{notification.message}",
+        "level": "{notification.level}",
+        "agents": "{notification.targets}"
+      },
+      "channels": ["memory", "coordination-graph", "neural-feedback"]
+    },
+    "coordination-sync": {
+      "enabled": true,
+      "interval": "60s",
+      "command": "npx claude-flow@alpha hooks coordination-sync",
+      "parameters": {
+        "swarmId": "branding-hero-swarm",
+        "syncType": "incremental"
+      },
+      "actions": [
+        "sync-agent-states",
+        "balance-workload",
+        "update-topology",
+        "optimize-resource-allocation"
+      ]
+    }
+  },
+  "postOperationHooks": {
+    "post-task": {
+      "enabled": true,
+      "priority": 1,
+      "command": "npx claude-flow@alpha hooks post-task",
+      "parameters": {
+        "taskId": "{task.id}",
+        "agent": "{agent.id}",
+        "status": "{task.status}",
+        "metrics": "{task.metrics}"
+      },
+      "actions": [
+        "update-task-history",
+        "calculate-performance-metrics",
+        "update-neural-weights",
+        "generate-learnings",
+        "cleanup-temporary-resources"
+      ]
+    },
+    "session-end": {
+      "enabled": true,
+      "priority": 2,
+      "command": "npx claude-flow@alpha hooks session-end",
+      "parameters": {
+        "sessionId": "{session.id}",
+        "exportMetrics": true,
+        "persistState": true
+      },
+      "actions": [
+        "export-session-metrics",
+        "persist-agent-states",
+        "compress-memory-data",
+        "generate-session-summary",
+        "cleanup-expired-data"
+      ]
+    },
+    "auto-format": {
+      "enabled": true,
+      "triggers": ["code-completion", "file-write"],
+      "fileTypes": ["*.js", "*.html", "*.css", "*.json"],
+      "formatters": {
+        "javascript": "prettier",
+        "html": "prettier",
+        "css": "prettier",
+        "json": "json-format"
+      }
+    }
+  },
+  "specializedHooks": {
+    "branding-validation": {
+      "enabled": true,
+      "triggers": ["brand-asset-update", "design-change"],
+      "validations": [
+        "brand-consistency-check",
+        "color-palette-validation",
+        "typography-compliance",
+        "logo-usage-validation"
+      ]
+    },
+    "performance-monitoring": {
+      "enabled": true,
+      "interval": "30s",
+      "metrics": [
+        "agent-response-time",
+        "memory-utilization",
+        "task-completion-rate",
+        "neural-inference-time"
+      ],
+      "thresholds": {
+        "warning": "responseTime > 20s",
+        "critical": "responseTime > 45s OR errorRate > 0.1"
+      }
+    },
+    "content-optimization": {
+      "enabled": true,
+      "triggers": ["content-creation", "content-update"],
+      "optimizations": [
+        "seo-optimization",
+        "readability-check",
+        "brand-voice-validation",
+        "accessibility-compliance"
+      ]
+    }
+  },
+  "errorRecovery": {
+    "enabled": true,
+    "strategies": {
+      "retry": {
+        "maxAttempts": 3,
+        "backoffStrategy": "exponential",
+        "baseDelay": 1000
+      },
+      "fallback": {
+        "enabled": true,
+        "fallbackAgent": "system-architect",
+        "escalation": true
+      },
+      "rollback": {
+        "enabled": true,
+        "snapshotInterval": "10m",
+        "rollbackTrigger": "critical-error"
+      }
+    }
+  }
+}

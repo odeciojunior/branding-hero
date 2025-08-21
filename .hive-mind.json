@@ -1,0 +1,301 @@
+{
+  "version": "2.0.0",
+  "name": "branding-hero-hive-mind",
+  "description": "Intelligent swarm coordination for branding and web development",
+  
+  "topology": {
+    "default": "adaptive",
+    "configurations": {
+      "hierarchical": {
+        "type": "hierarchical",
+        "maxAgents": 12,
+        "layers": ["coordinator", "specialists", "workers"],
+        "communication": "top-down-with-feedback"
+      },
+      "mesh": {
+        "type": "mesh",
+        "maxAgents": 8,
+        "connectivity": "full",
+        "consensus": "byzantine-fault-tolerant"
+      },
+      "star": {
+        "type": "star",
+        "maxAgents": 6,
+        "hub": "task-orchestrator",
+        "spokes": ["coder", "tester", "reviewer", "documenter", "architect"]
+      }
+    },
+    "auto_switch": {
+      "enabled": true,
+      "triggers": {
+        "complexity_threshold": 0.7,
+        "agent_count": 5,
+        "task_parallelism": 3
+      }
+    }
+  },
+  
+  "agents": {
+    "auto_spawn": {
+      "enabled": true,
+      "rules": [
+        {
+          "condition": "task_complexity > 0.8",
+          "spawn": ["system-architect", "task-orchestrator", "coder", "tester", "reviewer"],
+          "topology": "hierarchical"
+        },
+        {
+          "condition": "file_type === 'branding'",
+          "spawn": ["base-template-generator", "code-analyzer", "api-docs"],
+          "topology": "star"
+        },
+        {
+          "condition": "task_type === 'debug'",
+          "spawn": ["perf-analyzer", "code-analyzer", "tester"],
+          "topology": "mesh"
+        }
+      ]
+    },
+    "coordination": {
+      "communication_protocol": "event-driven",
+      "message_queue": "in-memory",
+      "sync_interval": 500,
+      "heartbeat": 1000
+    },
+    "capabilities": {
+      "branding": ["base-template-generator", "code-analyzer", "api-docs"],
+      "development": ["coder", "tester", "reviewer", "backend-dev", "mobile-dev"],
+      "optimization": ["perf-analyzer", "performance-benchmarker", "task-orchestrator"],
+      "architecture": ["system-architect", "repo-architect", "sparc-coord"]
+    }
+  },
+  
+  "memory": {
+    "persistence": {
+      "enabled": true,
+      "type": "sqlite",
+      "path": "./memory/hive-mind.db",
+      "backup_interval": 3600000
+    },
+    "sharing": {
+      "enabled": true,
+      "namespaces": ["global", "project", "session", "agent", "shared"],
+      "sync_strategy": "eventual-consistency",
+      "conflict_resolution": "last-write-wins"
+    },
+    "caching": {
+      "levels": ["L1_agent", "L2_swarm", "L3_persistent"],
+      "ttl": {
+        "L1": 300000,
+        "L2": 900000,
+        "L3": "persistent"
+      }
+    }
+  },
+  
+  "neural": {
+    "enabled": true,
+    "models": [
+      {
+        "name": "coordination_network",
+        "type": "graph-neural-network",
+        "purpose": "agent_coordination",
+        "training": "online"
+      },
+      {
+        "name": "pattern_recognizer",
+        "type": "convolutional",
+        "purpose": "code_pattern_detection",
+        "training": "batch"
+      },
+      {
+        "name": "branding_optimizer",
+        "type": "transformer",
+        "purpose": "content_generation",
+        "training": "fine-tuning"
+      },
+      {
+        "name": "performance_predictor",
+        "type": "lstm",
+        "purpose": "bottleneck_prediction",
+        "training": "reinforcement"
+      }
+    ],
+    "cognitive_patterns": {
+      "enabled": true,
+      "types": ["convergent", "divergent", "lateral", "systems", "critical", "adaptive"],
+      "auto_select": true
+    },
+    "learning": {
+      "continuous": true,
+      "feedback_loop": true,
+      "meta_learning": true,
+      "transfer_learning": true
+    }
+  },
+  
+  "performance": {
+    "optimization": {
+      "auto_scale": true,
+      "max_agents": 12,
+      "min_agents": 1,
+      "scale_triggers": {
+        "cpu_threshold": 80,
+        "memory_threshold": 85,
+        "queue_length": 10
+      }
+    },
+    "monitoring": {
+      "enabled": true,
+      "metrics": ["latency", "throughput", "token_usage", "success_rate"],
+      "export_interval": 60000,
+      "alert_thresholds": {
+        "latency_ms": 5000,
+        "error_rate": 0.1,
+        "token_usage": 100000
+      }
+    },
+    "bottleneck_detection": {
+      "enabled": true,
+      "analysis_interval": 30000,
+      "auto_resolve": true,
+      "strategies": ["load_balancing", "task_splitting", "agent_scaling", "cache_optimization"]
+    }
+  },
+  
+  "hooks": {
+    "enabled": true,
+    "categories": {
+      "pre_operation": [
+        "validate_task",
+        "assign_agents",
+        "prepare_resources",
+        "check_dependencies"
+      ],
+      "during_operation": [
+        "update_memory",
+        "sync_agents",
+        "monitor_performance",
+        "train_patterns"
+      ],
+      "post_operation": [
+        "cleanup_resources",
+        "export_metrics",
+        "update_learning",
+        "persist_state"
+      ],
+      "error_handling": [
+        "capture_error",
+        "analyze_failure",
+        "trigger_recovery",
+        "notify_agents"
+      ]
+    },
+    "custom_hooks": {
+      "branding_validation": {
+        "trigger": "file_save",
+        "condition": "file.type === 'branding'",
+        "action": "validate_brand_consistency"
+      },
+      "performance_alert": {
+        "trigger": "metric_threshold",
+        "condition": "latency > 3000",
+        "action": "optimize_execution_path"
+      }
+    }
+  },
+  
+  "concurrent_execution": {
+    "patterns": [
+      {
+        "name": "branding_workflow",
+        "type": "pipeline",
+        "stages": ["analysis", "strategy", "design", "implementation", "validation"],
+        "parallelism": "stage"
+      },
+      {
+        "name": "content_pipeline",
+        "type": "producer_consumer",
+        "producers": ["content_generator", "template_creator"],
+        "consumers": ["validator", "optimizer", "deployer"],
+        "queue_size": 100
+      },
+      {
+        "name": "website_implementation",
+        "type": "map_reduce",
+        "mappers": ["page_builder", "component_creator", "style_processor"],
+        "reducers": ["integration", "optimization", "deployment"]
+      }
+    ],
+    "scheduling": {
+      "algorithm": "priority_queue_with_fairness",
+      "preemption": true,
+      "time_slicing": 100
+    }
+  },
+  
+  "error_recovery": {
+    "mechanisms": {
+      "circuit_breaker": {
+        "enabled": true,
+        "failure_threshold": 5,
+        "timeout": 30000,
+        "reset_timeout": 60000
+      },
+      "retry_policy": {
+        "max_attempts": 3,
+        "backoff": "exponential",
+        "base_delay": 1000
+      },
+      "failover": {
+        "enabled": true,
+        "strategy": "active_passive",
+        "health_check_interval": 5000
+      },
+      "rollback": {
+        "enabled": true,
+        "snapshot_interval": 300000,
+        "max_snapshots": 5
+      }
+    },
+    "self_healing": {
+      "enabled": true,
+      "strategies": ["restart_agent", "reassign_task", "scale_resources", "switch_topology"]
+    }
+  },
+  
+  "integration": {
+    "claude_flow": {
+      "version": "2.0.0-alpha",
+      "mcp_tools": true,
+      "sparc_methodology": true,
+      "github_integration": true
+    },
+    "external_services": {
+      "github": {
+        "enabled": true,
+        "features": ["pr_management", "issue_tracking", "workflow_automation"]
+      },
+      "monitoring": {
+        "enabled": true,
+        "providers": ["prometheus", "grafana"]
+      }
+    }
+  },
+  
+  "security": {
+    "encryption": {
+      "at_rest": true,
+      "in_transit": true,
+      "algorithm": "AES-256-GCM"
+    },
+    "authentication": {
+      "required": false,
+      "methods": ["token", "certificate"]
+    },
+    "authorization": {
+      "rbac": true,
+      "policies": ["agent_permissions", "resource_access"]
+    }
+  }
+}

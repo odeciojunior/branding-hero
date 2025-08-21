@@ -1,0 +1,122 @@
+{
+  "memoryArchitecture": {
+    "type": "distributed-hierarchical",
+    "persistence": "cross-session",
+    "compression": "adaptive",
+    "synchronization": "real-time"
+  },
+  "namespaces": {
+    "global": {
+      "path": "branding-hero",
+      "ttl": "indefinite",
+      "access": "all-agents",
+      "compression": true
+    },
+    "project": {
+      "path": "branding-hero/project",
+      "ttl": "30d",
+      "access": "core-agents",
+      "subnamespaces": {
+        "requirements": "branding-hero/project/requirements",
+        "architecture": "branding-hero/project/architecture", 
+        "decisions": "branding-hero/project/decisions",
+        "assets": "branding-hero/project/assets"
+      }
+    },
+    "session": {
+      "path": "branding-hero/sessions",
+      "ttl": "7d",
+      "access": "session-agents",
+      "rolling": true
+    },
+    "agent": {
+      "path": "branding-hero/agents",
+      "ttl": "24h",
+      "access": "owner-agent",
+      "private": true
+    },
+    "shared": {
+      "path": "branding-hero/shared",
+      "ttl": "3d", 
+      "access": "collaborating-agents",
+      "versioning": true
+    }
+  },
+  "memoryTypes": {
+    "contextual": {
+      "description": "Project context and requirements",
+      "namespace": "project/requirements",
+      "structure": {
+        "brandGuidelines": "object",
+        "targetAudience": "object",
+        "competitorAnalysis": "array",
+        "designPrinciples": "array"
+      }
+    },
+    "procedural": {
+      "description": "Workflows and processes",
+      "namespace": "project/architecture",
+      "structure": {
+        "workflows": "object",
+        "patterns": "array",
+        "bestPractices": "array"
+      }
+    },
+    "episodic": {
+      "description": "Task history and outcomes",
+      "namespace": "sessions",
+      "structure": {
+        "taskHistory": "array",
+        "decisions": "array", 
+        "outcomes": "array",
+        "learnings": "array"
+      }
+    },
+    "semantic": {
+      "description": "Domain knowledge and concepts",
+      "namespace": "global",
+      "structure": {
+        "brandingConcepts": "object",
+        "designPatterns": "object",
+        "marketingPrinciples": "object"
+      }
+    }
+  },
+  "sharingProtocols": {
+    "crossAgent": {
+      "enabled": true,
+      "method": "publish-subscribe",
+      "channels": ["updates", "decisions", "alerts", "coordination"],
+      "compression": true,
+      "encryption": false
+    },
+    "crossSession": {
+      "enabled": true,
+      "method": "persistent-store",
+      "restoration": "automatic",
+      "migration": true
+    }
+  },
+  "memoryOptimization": {
+    "autoCleanup": {
+      "enabled": true,
+      "schedule": "daily",
+      "rules": {
+        "removeExpired": true,
+        "compressOld": true,
+        "archiveInactive": true
+      }
+    },
+    "deduplication": {
+      "enabled": true,
+      "algorithm": "content-hash",
+      "threshold": 0.95
+    },
+    "caching": {
+      "enabled": true,
+      "strategy": "LRU",
+      "maxSize": "100MB",
+      "ttl": "1h"
+    }
+  }
+}

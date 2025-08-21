@@ -1,0 +1,107 @@
+{
+  "coordinationPatterns": {
+    "brandingWorkflow": {
+      "description": "Coordinated workflow for branding and design tasks",
+      "agents": {
+        "primary": {
+          "system-architect": {
+            "role": "coordinator",
+            "capabilities": ["system-design", "architectural-decisions", "requirement-analysis"],
+            "priority": 1,
+            "autoSpawn": true,
+            "memoryAccess": "full"
+          },
+          "researcher": {
+            "role": "analyzer",
+            "capabilities": ["market-research", "competitor-analysis", "trend-analysis"],
+            "priority": 2,
+            "autoSpawn": "on-demand",
+            "memoryAccess": "read-write"
+          },
+          "coder": {
+            "role": "implementer", 
+            "capabilities": ["html-css", "javascript", "responsive-design", "optimization"],
+            "priority": 3,
+            "autoSpawn": "on-demand",
+            "memoryAccess": "read-write"
+          }
+        },
+        "specialized": {
+          "collective-intelligence-coordinator": {
+            "role": "meta-coordinator",
+            "capabilities": ["swarm-coordination", "decision-making", "consensus"],
+            "priority": 1,
+            "autoSpawn": "complex-tasks",
+            "memoryAccess": "full"
+          },
+          "memory-coordinator": {
+            "role": "memory-manager",
+            "capabilities": ["memory-optimization", "data-synchronization", "cache-management"],
+            "priority": 2,
+            "autoSpawn": true,
+            "memoryAccess": "admin"
+          },
+          "performance-benchmarker": {
+            "role": "optimizer",
+            "capabilities": ["performance-analysis", "bottleneck-detection", "optimization"],
+            "priority": 3,
+            "autoSpawn": "performance-issues",
+            "memoryAccess": "read"
+          }
+        }
+      }
+    }
+  },
+  "autoSpawningRules": {
+    "taskComplexityTriggers": {
+      "simple": {
+        "minAgents": 1,
+        "maxAgents": 3,
+        "defaultAgents": ["coder"]
+      },
+      "moderate": {
+        "minAgents": 3,
+        "maxAgents": 6,
+        "defaultAgents": ["system-architect", "coder", "researcher"]
+      },
+      "complex": {
+        "minAgents": 5,
+        "maxAgents": 10,
+        "defaultAgents": ["system-architect", "collective-intelligence-coordinator", "coder", "researcher", "reviewer", "performance-benchmarker"]
+      }
+    },
+    "fileTypeTriggers": {
+      "*.html": ["coder", "reviewer"],
+      "*.css": ["coder", "optimizer"],
+      "*.js": ["coder", "tester", "reviewer"],
+      "*.md": ["researcher", "content-creator"],
+      "*.json": ["system-architect", "code-analyzer"],
+      "*.py": ["coder", "tester"],
+      "design/**": ["designer", "creative-director"],
+      "brand-docs/**": ["researcher", "content-strategist"]
+    },
+    "contextTriggers": {
+      "branding": ["researcher", "creative-director", "content-strategist"],
+      "performance": ["performance-benchmarker", "optimizer"],
+      "testing": ["tester", "production-validator"],
+      "documentation": ["technical-writer", "content-creator"]
+    }
+  },
+  "agentCapabilities": {
+    "system-architect": {
+      "strengths": ["system-design", "technical-leadership", "architecture-decisions"],
+      "domains": ["architecture", "system-integration", "technical-strategy"],
+      "collaboratesWith": ["collective-intelligence-coordinator", "performance-benchmarker"]
+    },
+    "researcher": {
+      "strengths": ["data-analysis", "market-research", "competitive-intelligence"],
+      "domains": ["market-analysis", "user-research", "trend-analysis"],
+      "collaboratesWith": ["content-strategist", "creative-director"]
+    },
+    "coder": {
+      "strengths": ["implementation", "frontend-development", "optimization"],
+      "domains": ["web-development", "responsive-design", "performance"],
+      "collaboratesWith": ["tester", "reviewer", "performance-benchmarker"]
+    }
+  }
+}

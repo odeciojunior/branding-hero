@@ -1,0 +1,113 @@
+{
+  "validation": {
+    "configurationValidation": {
+      "requiredFiles": [
+        ".hive-mind.json",
+        "hive-mind-topology.json",
+        "hive-mind-agents.json",
+        "hive-mind-memory.json",
+        "hive-mind-neural.json",
+        "hive-mind-performance.json",
+        "hive-mind-hooks.json",
+        "hive-mind-patterns.json"
+      ],
+      "schemaValidation": {
+        "enabled": true,
+        "strictMode": false,
+        "validateReferences": true
+      }
+    },
+    "topologyValidation": {
+      "validateConnectivity": true,
+      "checkCycles": true,
+      "verifyCapacity": true,
+      "validateAgentTypes": true
+    },
+    "memoryValidation": {
+      "validateNamespaces": true,
+      "checkPermissions": true,
+      "validateTTL": true,
+      "checkCapacity": true
+    },
+    "neuralValidation": {
+      "validateArchitectures": true,
+      "checkTrainingData": false,
+      "validateModels": true,
+      "testInference": false
+    },
+    "performanceValidation": {
+      "checkThresholds": true,
+      "validateMetrics": true,
+      "testScaling": false,
+      "validateCaching": true
+    }
+  },
+  "tests": {
+    "unitTests": {
+      "configurationParsing": true,
+      "agentInstantiation": true,
+      "memoryOperations": true,
+      "hookExecution": true
+    },
+    "integrationTests": {
+      "agentCoordination": true,
+      "memorySharing": true,
+      "neuralInference": false,
+      "performanceMetrics": true
+    },
+    "systemTests": {
+      "fullWorkflow": false,
+      "stressTest": false,
+      "failoverTest": true,
+      "recoveryTest": true
+    }
+  },
+  "healthChecks": {
+    "startup": {
+      "validateConfiguration": true,
+      "checkDependencies": true,
+      "initializeComponents": true,
+      "verifyConnectivity": true
+    },
+    "runtime": {
+      "interval": "60s",
+      "checkAgentHealth": true,
+      "validateMemoryIntegrity": true,
+      "monitorPerformance": true,
+      "validateCoordination": true
+    },
+    "shutdown": {
+      "gracefulShutdown": true,
+      "persistState": true,
+      "cleanupResources": true,
+      "generateReport": true
+    }
+  },
+  "troubleshooting": {
+    "commonIssues": {
+      "configurationErrors": {
+        "missingFiles": "Check all configuration files are present in config/",
+        "invalidJSON": "Validate JSON syntax in configuration files",
+        "invalidReferences": "Check cross-references between configuration files"
+      },
+      "agentIssues": {
+        "spawnFailure": "Check agent type definitions and capabilities",
+        "communicationFailure": "Validate coordination topology and memory access",
+        "performanceIssues": "Check resource allocation and performance thresholds"
+      },
+      "memoryIssues": {
+        "accessDenied": "Validate namespace permissions and access control",
+        "capacityExceeded": "Check memory limits and cleanup policies",
+        "dataCorruption": "Validate data integrity and backup systems"
+      }
+    },
+    "diagnostics": {
+      "commands": {
+        "checkConfig": "npx claude-flow@alpha config validate --config config/.hive-mind.json",
+        "testMemory": "npx claude-flow@alpha memory test --namespace branding-hero",
+        "checkAgents": "npx claude-flow@alpha agents status --verbose",
+        "validateHooks": "npx claude-flow@alpha hooks test --config config/hive-mind-hooks.json"
+      }
+    }
+  }
+}

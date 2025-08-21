@@ -1,0 +1,133 @@
+{
+  "performanceOptimization": {
+    "globalSettings": {
+      "maxConcurrentAgents": 12,
+      "maxConcurrentTasks": 20,
+      "resourceAllocationStrategy": "adaptive",
+      "loadBalancing": "weighted-round-robin",
+      "priorityQueuing": true
+    },
+    "responseTimeTargets": {
+      "simple-tasks": "5s",
+      "moderate-tasks": "15s", 
+      "complex-tasks": "45s",
+      "system-operations": "2s"
+    },
+    "throughputTargets": {
+      "tasks-per-minute": 15,
+      "agents-per-task": 3.5,
+      "memory-operations-per-second": 100
+    }
+  },
+  "bottleneckDetection": {
+    "enabled": true,
+    "monitoringInterval": "30s",
+    "thresholds": {
+      "cpuUtilization": 80,
+      "memoryUtilization": 85,
+      "taskQueueLength": 10,
+      "responseTime": 30000,
+      "errorRate": 0.05
+    },
+    "triggers": {
+      "scaleUp": {
+        "condition": "cpuUtilization > 80 OR taskQueueLength > 10",
+        "action": "spawn_additional_agents",
+        "cooldown": "5m"
+      },
+      "scaleDown": {
+        "condition": "cpuUtilization < 30 AND taskQueueLength < 2",
+        "action": "reduce_agent_count", 
+        "cooldown": "10m"
+      },
+      "topologySwitch": {
+        "condition": "errorRate > 0.05 OR responseTime > 45000",
+        "action": "switch_to_fallback_topology",
+        "cooldown": "2m"
+      }
+    }
+  },
+  "resourceManagement": {
+    "memoryManagement": {
+      "maxMemoryPerAgent": "256MB",
+      "globalMemoryLimit": "2GB",
+      "gcStrategy": "generational",
+      "compressionThreshold": "100MB"
+    },
+    "taskPrioritization": {
+      "levels": ["critical", "high", "medium", "low"],
+      "weights": [4, 3, 2, 1],
+      "aging": true,
+      "starvationPrevention": true
+    },
+    "agentAllocation": {
+      "strategy": "capability-based",
+      "loadBalancing": true,
+      "failover": true,
+      "healthChecks": true
+    }
+  },
+  "cachingStrategy": {
+    "levels": {
+      "L1": {
+        "type": "in-memory",
+        "size": "64MB",
+        "ttl": "5m",
+        "evictionPolicy": "LRU"
+      },
+      "L2": {
+        "type": "distributed",
+        "size": "256MB", 
+        "ttl": "30m",
+        "evictionPolicy": "LFU"
+      },
+      "L3": {
+        "type": "persistent",
+        "size": "1GB",
+        "ttl": "24h",
+        "evictionPolicy": "TTL-based"
+      }
+    },
+    "policies": {
+      "brandingAssets": "L3",
+      "agentStates": "L1",
+      "taskResults": "L2",
+      "neuralWeights": "L3"
+    }
+  },
+  "metrics": {
+    "collection": {
+      "enabled": true,
+      "interval": "10s",
+      "retention": "30d",
+      "aggregation": "time-series"
+    },
+    "types": {
+      "performance": {
+        "responseTime": "histogram",
+        "throughput": "counter",
+        "errorRate": "gauge",
+        "resourceUtilization": "gauge"
+      },
+      "business": {
+        "taskSuccess": "counter",
+        "userSatisfaction": "gauge",
+        "completionRate": "gauge"
+      },
+      "technical": {
+        "agentHealth": "gauge",
+        "memoryUsage": "gauge",
+        "networkLatency": "histogram"
+      }
+    },
+    "alerting": {
+      "enabled": true,
+      "channels": ["console", "memory"],
+      "thresholds": {
+        "critical": "responseTime > 60s OR errorRate > 0.1",
+        "warning": "responseTime > 30s OR errorRate > 0.05",
+        "info": "new_agent_spawned OR topology_changed"
+      }
+    }
+  }
+}

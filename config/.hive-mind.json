@@ -1,0 +1,51 @@
+{
+  "metadata": {
+    "name": "branding-hero-hive-mind",
+    "version": "2.0.0",
+    "description": "Comprehensive hive-mind configuration for claude-flow integration in branding-hero project",
+    "created": "2025-08-21",
+    "author": "Claude System Architect",
+    "project": "branding-hero"
+  },
+  "core": {
+    "enabled": true,
+    "mode": "adaptive",
+    "coordinationEngine": "claude-flow",
+    "executionEngine": "claude-code",
+    "sessionId": "branding-hero-hive",
+    "globalNamespace": "branding-hero"
+  },
+  "includes": [
+    "./hive-mind-topology.json",
+    "./hive-mind-agents.json", 
+    "./hive-mind-memory.json",
+    "./hive-mind-neural.json",
+    "./hive-mind-performance.json",
+    "./hive-mind-hooks.json",
+    "./hive-mind-patterns.json"
+  ],
+  "initialization": {
+    "autoStart": true,
+    "warmupAgents": ["system-architect", "memory-coordinator", "performance-benchmarker"],
+    "preloadPatterns": ["branding", "design", "marketing", "content"],
+    "restoreSession": true,
+    "enableTelemetry": true
+  },
+  "errorHandling": {
+    "maxRetries": 3,
+    "fallbackTopology": "hierarchical",
+    "recoveryStrategy": "adaptive",
+    "healingEnabled": true,
+    "rollbackOnFailure": true
+  },
+  "security": {
+    "validateAgents": true,
+    "encryptMemory": false,
+    "auditTrail": true,
+    "accessControl": {
+      "readAccess": ["all"],
+      "writeAccess": ["system", "coordinator", "memory"],
+      "adminAccess": ["system-architect"]
+    }
+  }
+}

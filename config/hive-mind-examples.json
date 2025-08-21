@@ -1,0 +1,127 @@
+{
+  "usageExamples": {
+    "simpleTaskExecution": {
+      "description": "Execute a simple branding task with automatic agent spawning",
+      "command": "Task('Analyze brand positioning', 'Review current brand guidelines and market position. Store findings in memory.', 'researcher')",
+      "expectedAgents": ["researcher", "memory-coordinator"],
+      "expectedMemory": "branding-hero/project/analysis",
+      "estimatedTime": "5-10 minutes"
+    },
+    "complexWorkflow": {
+      "description": "Execute complete branding workflow with multiple concurrent agents",
+      "commands": [
+        "mcp__claude-flow__swarm_init({ topology: 'adaptive-hierarchical', maxAgents: 8 })",
+        "Task('Market Research', 'Conduct comprehensive market analysis and competitor research. Document findings in shared memory.', 'researcher')",
+        "Task('Brand Strategy', 'Develop positioning strategy based on research. Create brand architecture.', 'brand-strategist')", 
+        "Task('Visual Design', 'Create visual identity system including logo, colors, typography.', 'creative-director')",
+        "Task('Web Implementation', 'Implement brand identity in responsive website design.', 'coder')",
+        "Task('Quality Review', 'Review all deliverables for brand consistency and quality.', 'reviewer')"
+      ],
+      "expectedAgents": ["researcher", "brand-strategist", "creative-director", "coder", "reviewer", "system-architect", "memory-coordinator"],
+      "expectedDuration": "30-45 minutes"
+    },
+    "contentCreationPipeline": {
+      "description": "Parallel content creation with brand validation",
+      "pattern": "pipeline-parallel",
+      "commands": [
+        "Task('Content Strategy', 'Develop content strategy aligned with brand voice and positioning.', 'content-strategist')",
+        "Task('Content Creation', 'Create website copy, headlines, and marketing materials.', 'copywriter')",
+        "Task('Brand Validation', 'Ensure all content aligns with brand guidelines and voice.', 'brand-validator')",
+        "Task('SEO Optimization', 'Optimize content for search engines while maintaining brand voice.', 'seo-optimizer')"
+      ],
+      "coordination": "producer-consumer",
+      "expectedAgents": ["content-strategist", "copywriter", "brand-validator", "seo-optimizer"]
+    }
+  },
+  "coordinationExamples": {
+    "hierarchicalCoordination": {
+      "description": "System architect coordinates specialized teams",
+      "structure": {
+        "coordinator": "system-architect",
+        "research_team": ["researcher", "analyst", "competitive-intelligence"],
+        "design_team": ["creative-director", "designer", "brand-strategist"],
+        "development_team": ["coder", "frontend-dev", "performance-optimizer"],
+        "validation_team": ["reviewer", "tester", "production-validator"]
+      }
+    },
+    "meshCoordination": {
+      "description": "All agents collaborate directly with consensus mechanism",
+      "structure": {
+        "participants": ["researcher", "creative-director", "coder", "reviewer"],
+        "consensus": "majority-voting",
+        "conflictResolution": "escalate-to-architect"
+      }
+    }
+  },
+  "memoryExamples": {
+    "crossAgentSharing": {
+      "description": "Share branding guidelines across all agents",
+      "commands": [
+        "npx claude-flow@alpha memory store --key 'branding-hero/shared/guidelines' --value '{brand_guidelines}' --ttl '7d'",
+        "npx claude-flow@alpha memory subscribe --pattern 'branding-hero/shared/*' --agent 'all'"
+      ]
+    },
+    "contextualMemory": {
+      "description": "Store task-specific context with proper scoping",
+      "commands": [
+        "npx claude-flow@alpha memory store --key 'branding-hero/project/requirements/target-audience' --value '{audience_data}' --namespace 'project'",
+        "npx claude-flow@alpha memory store --key 'branding-hero/sessions/{session_id}/current-task' --value '{task_context}' --namespace 'session'"
+      ]
+    }
+  },
+  "neuralExamples": {
+    "patternRecognition": {
+      "description": "Train neural network on design patterns",
+      "commands": [
+        "npx claude-flow@alpha neural train --type 'patternRecognition' --data 'design-examples' --epochs 50",
+        "npx claude-flow@alpha neural predict --model 'patternRecognition' --input 'design-request'"
+      ]
+    },
+    "coordinationOptimization": {
+      "description": "Optimize agent coordination based on performance data",
+      "commands": [
+        "npx claude-flow@alpha neural train --type 'coordinationNetwork' --data 'performance-metrics' --online",
+        "npx claude-flow@alpha neural patterns analyze --pattern 'coordination' --action 'optimize'"
+      ]
+    }
+  },
+  "performanceExamples": {
+    "bottleneckDetection": {
+      "description": "Detect and resolve performance bottlenecks",
+      "monitoring": [
+        "npx claude-flow@alpha monitor start --interval 30s",
+        "npx claude-flow@alpha bottleneck analyze --component 'all'",
+        "npx claude-flow@alpha optimization apply --strategy 'auto'"
+      ]
+    },
+    "loadBalancing": {
+      "description": "Balance workload across available agents",
+      "commands": [
+        "npx claude-flow@alpha load-balance --strategy 'capability-based'",
+        "npx claude-flow@alpha agents scale --target-size 8 --strategy 'adaptive'"
+      ]
+    }
+  },
+  "errorRecoveryExamples": {
+    "agentFailover": {
+      "description": "Automatic failover when agent becomes unresponsive",
+      "scenario": "Primary coder agent fails during implementation",
+      "recovery": [
+        "Detect agent failure via health check",
+        "Spawn backup coder agent",
+        "Transfer context and partial work",
+        "Resume execution seamlessly"
+      ]
+    },
+    "topologyAdaptation": {
+      "description": "Switch topology when performance degrades",
+      "scenario": "High error rate in hierarchical topology",
+      "recovery": [
+        "Detect performance degradation",
+        "Switch to mesh topology",
+        "Redistribute agents and tasks",
+        "Monitor for improvement"
+      ]
+    }
+  }
+}

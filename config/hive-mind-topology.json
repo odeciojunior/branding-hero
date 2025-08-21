@@ -1,0 +1,70 @@
+{
+  "topologyDefinitions": {
+    "primary": {
+      "type": "adaptive-hierarchical",
+      "description": "Adaptive hierarchical with mesh fallback for complex branding tasks",
+      "maxAgents": 12,
+      "minAgents": 3,
+      "layers": {
+        "coordination": {
+          "agents": ["system-architect", "collective-intelligence-coordinator"],
+          "maxConcurrency": 2
+        },
+        "execution": {
+          "agents": ["coder", "researcher", "analyst", "designer"],
+          "maxConcurrency": 6
+        },
+        "validation": {
+          "agents": ["reviewer", "tester", "production-validator"],
+          "maxConcurrency": 4
+        }
+      }
+    },
+    "fallback": {
+      "type": "mesh",
+      "description": "Full mesh topology for high-complexity tasks",
+      "maxAgents": 8,
+      "connectionPattern": "full-mesh",
+      "coordinationMode": "distributed"
+    },
+    "simple": {
+      "type": "star",
+      "description": "Simple star topology for single-focus tasks",
+      "maxAgents": 5,
+      "centralAgent": "task-orchestrator"
+    }
+  },
+  "selectionCriteria": {
+    "taskComplexity": {
+      "low": "simple",
+      "medium": "primary", 
+      "high": "fallback"
+    },
+    "agentCount": {
+      "1-3": "simple",
+      "4-8": "primary",
+      "9-12": "fallback"
+    },
+    "operationType": {
+      "research": "primary",
+      "development": "fallback",
+      "analysis": "simple",
+      "design": "primary",
+      "content": "primary"
+    }
+  },
+  "dynamicAdjustment": {
+    "enabled": true,
+    "triggers": {
+      "performanceDegradation": "switch_topology",
+      "agentOverload": "scale_up",
+      "resourceConstraints": "scale_down",
+      "errorRate": "switch_fallback"
+    },
+    "thresholds": {
+      "responseTime": 30000,
+      "errorRate": 0.05,
+      "resourceUtilization": 0.85
+    }
+  }
+}
