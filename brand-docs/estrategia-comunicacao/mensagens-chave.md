@@ -22,6 +22,8 @@ A estratégia de comunicação da HERO é baseada em **ousadia fundamentada** e 
 
 *   **Headline Principal:** "Chega de Gastar Milhões em PowerPoints. Sua Empresa Precisa de Resultados."
 *   **Sub-headline:** "90% dos projetos de transformação digital falham porque tratam sua empresa como mais um número. Nós mergulhamos no seu negócio e entregamos soluções que funcionam de verdade - em 90 dias, não em 2 anos."
+*   **Verdade Inconveniente:** "Enquanto consultorias cobram milhões por PowerPoints sobre 'jornadas de transformação', 9 em cada 10 empresas continuam presas a planilhas Excel e processos manuais que matam sua competitividade."
+*   **Provocação Construtiva:** "Todos falam a mesma língua corporativa vazia. Nós falamos a linguagem dos resultados."
 *   **Foco:** Chamar a atenção, desafiar o status quo e criar identificação com as dores das PMEs.
 
 ### Meio de Funil (Consideração e Avaliação)
@@ -33,7 +35,15 @@ A estratégia de comunicação da HERO é baseada em **ousadia fundamentada** e 
 ### Fundo de Funil (Decisão e Ação)
 
 *   **Para Fechamento:** "ROI garantido em 90 dias ou seu dinheiro de volta. Colocamos nosso dinheiro onde está nossa boca."
+*   **Garantias Específicas:**
+    *   "30 dias para ver resultados ou devolvemos 100%"
+    *   "ROI mínimo de 200% em 12 meses garantido"
+    *   "Contrato pode ser cancelado a qualquer momento"
 *   **Para Diferenciação Final:** "Enquanto consultorias grandes faturam com sua complexidade, nós prosperamos com seu crescimento. Vamos começar?"
+*   **CTAs Orientadas a Benefício:**
+    *   "Quero Automatizar Agora" (não "Saiba Mais")
+    *   "Calcular Meu ROI em 2 Minutos" (não "Contato")
+    *   "Ver Quick Wins Disponíveis" (não "Nossas Soluções")
 *   **Foco:** Eliminar as últimas objeções, reduzir o risco percebido e criar um senso de urgência respeitosa para a tomada de decisão.
 
 ## Mensagens por Stakeholder
@@ -42,3 +52,17 @@ A estratégia de comunicação da HERO é baseada em **ousadia fundamentada** e 
 *   **Para CFOs/Financeiro:** "Começamos com investimentos pequenos que se pagam rápido e financiam os próximos passos. ROI garantido."
 *   **Para Gerentes/Operação:** "Menos planilhas, menos retrabalho, menos dor de cabeça. Automatizamos o chato para você focar no estratégico."
 *   **Para Equipes:** "Não viemos substituir ninguém. Viemos tornar seu trabalho mais interessante e sua produtividade impressionante."
+
+## Battle Cards Avançados para Objeções
+
+### Objeção: "Vocês são muito pequenos"
+**Resposta:** "Sim, somos menores - e é por isso que entregamos resultados melhores. O 'tamanho' deles significa 70% de falha, consultores juniores, implementações de 18 meses. Nosso tamanho significa especialistas sêniores, entrega em 90 dias, resultados garantidos."
+
+### Objeção: "O investimento é alto"
+**Resposta:** "Começamos com Quick Wins de R$30-50K que se pagam em 30 dias e financiam os próximos passos. Além disso, oferecemos garantia de devolução. Qual consultoria grande oferece isso?"
+
+### Objeção: "Já tentamos transformação digital e falhou"
+**Resposta:** "Entendemos. 88% falham por 3 razões: consultores juniores aplicando frameworks genéricos, projetos de 2 anos que perdem relevância, e foco em PowerPoints ao invés de software funcionando. Nossa metodologia HERO resolve esses 3 problemas."
+
+### Objeção: "IA vai substituir nossos funcionários?"
+**Resposta:** "IA não é para substituir pessoas, é para potencializá-las. Liberamos seu time de tarefas repetitivas para focar no que humanos fazem melhor: criar, relacionar, estrategizar."

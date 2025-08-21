@@ -26,6 +26,19 @@ A metodologia HERO é um framework operacional que sustenta todas as transforma�
     *   **Atividades:** Otimização baseada em dados, expansão de iniciativas bem-sucedidas e eliminação de gargalos para um crescimento sustentável.
     *   **Duração Média:** Contínuo.
 
+## Oportunidade de Mercado Brasil
+
+### Dados do Mercado
+*   **Tamanho:** USD $24.13 bilhões (2024) crescendo para $42.41 bilhões (2030)
+*   **Gap Crítico:** 51% das PMEs brasileiras estão presas em estágios iniciais de digitalização
+*   **Segmento Alvo:** Empresas com R$10M-500M de faturamento - o "missing middle" brasileiro
+*   **Investimento Governamental:** R$186.6 bilhões em programas de digitalização
+
+### Posicionamento de Preço
+*   **Sweet Spot:** R$100K-300K para projetos de transformação
+*   **Modelo:** 30% antecipado, 40% piloto, 30% baseado em resultados
+*   **Garantia:** ROI mínimo de 200% em 12 meses ou devolução do investimento
+
 ## Framework de Acrônimos Estratégicos
 
 O sistema de acrônimos HERO é uma estratégia de comunicação multinível, permitindo personalizar a mensagem para diferentes stakeholders sem perder a essência da marca.
@@ -61,3 +74,34 @@ O sistema de acrônimos HERO é uma estratégia de comunicação multinível, pe
     *   **Variações Contextuais:**
         *   **Habilidoso, Especialista, Resolutivo, Otimista:** Para perfis técnicos.
         *   **Humilde, Energético, Realizador, Obstinado:** Para cultura interna e valores.
+
+## Framework Expandido de Acrônimos Estratégicos (25+ Variações)
+
+Based on extensive market research and cultural adaptation needs, the HERO acronym system includes strategic variations for different contexts:
+
+### Recomendação Principal
+*   **Harmonização, Execução-Rápida, Resultados-Garantidos, Otimização-Contínua**
+    *   **Uso:** Positioning for Brazilian PME market emphasizing speed and guarantees
+    *   **Contexto:** Addresses 70-88% industry failure rate with guaranteed results
+
+### Variações por Categoria
+
+#### Categoria 1: Foco no Cliente
+*   **Horizonte-Ampliado, Eficiência-Real, Receita-Otimizada, Oportunidades-Concretas**
+*   **Habilitação-Digital, Excelência-Operacional, Resultados-Mensuráveis, Organização-Inteligente**
+
+#### Categoria 2: Transformação Digital
+*   **High-Tech, Edge-Computing, Real-Time-Analytics, Optimization-Engine**
+*   **Hybrid-Cloud, Enterprise-Integration, Robotic-Automation, Operational-Intelligence**
+
+#### Categoria 3: Proximidade e Parceria
+*   **Humanização-Tecnológica, Engajamento-Profundo, Relacionamento-Duradouro, Orientação-Estratégica**
+*   **Hands-On-Approach, Expert-Guidance, Results-Partnership, Ongoing-Support**
+
+#### Categoria 4: Garantias e Resultados
+*   **Hipótese-Validada, Execução-Garantida, ROI-Comprovado, Otimização-Mensurável**
+*   **High-Performance, Efficiency-Boost, Revenue-Growth, Operational-Excellence**
+
+#### Categoria 5: Adaptação Cultural (PT/EN Híbrido)
+*   **Hands-on, Expertise-Local, Resultados-Quick-Wins, Ownership-Compartilhado**
+    *   **Uso:** Comunicação com multinacionais e PMEs internacionalizadas
